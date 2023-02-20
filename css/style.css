@@ -4,6 +4,7 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -212,6 +213,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: var(--bs-heading-color, inherit);
@@ -11608,14 +11610,171 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.project {
+  aspect-ratio: 1;
+  position: relative;
+}
+.project::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background: url("https://picsum.photos/300/300?grayscale");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.project .project-overlay {
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #FDC500, #FFEE32);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+.project:hover .project-overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#l1-pomelia .project::after {
+  width: 80%;
+  height: 80%;
+}
+#l1-pomelia .project-overlay {
+  width: 70%;
+  height: 70%;
+}
+
+#l2-kicks .project::after {
+  width: 100%;
+  height: 100%;
+}
+#l2-kicks .project-overlay {
+  width: 90%;
+  height: 90%;
+}
+
+#l3 .project::after {
+  width: 90%;
+  height: 90%;
+}
+#l3 .project-overlay {
+  width: 80%;
+  height: 80%;
+}
+
+#l4 .project::after {
+  width: 85%;
+  height: 85%;
+}
+#l4 .project-overlay {
+  width: 75%;
+  height: 75%;
+}
+
+#l5 .project::after {
+  width: 75%;
+  height: 75%;
+}
+#l5 .project-overlay {
+  width: 65%;
+  height: 65%;
+}
+
+#l6 .project::after {
+  width: 95%;
+  height: 95%;
+}
+#l6 .project-overlay {
+  width: 85%;
+  height: 85%;
+}
+
+#l4, #l5, #l6 {
+  display: none;
+}
+
+:root {
+  --bs-body-font-family: "Merriweather",serif;
+}
+
+main {
+  overflow: hidden;
+}
+
+h1, .h1 {
+  font-size: 10rem;
+  letter-spacing: 0.5rem;
+}
+
+.btn {
+  border-radius: 20px;
+  font-family: "Raleway", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.colorful {
+  background-image: linear-gradient(to top, #FDC500, #FFEE32);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-title {
+  letter-spacing: 0.5rem;
+}
+
+.nav-link {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--bs-body-color);
+}
+.nav-link:hover {
+  color: #FDC500;
+}
+
+#home .row {
+  position: relative;
+}
+
 #home .row .col-12::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 60rem;
-  height: 60rem;
+  width: 50em;
+  height: 50em;
   border-radius: 50%;
-  border: 8rem solid #FDC500;
+  border: 6rem solid #FDC500;
+  z-index: -1;
+}
+
+#about-me img {
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+
+#portfolio {
+  position: relative;
+}
+
+#portfolio .row::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50em;
+  height: 50em;
+  border-radius: 50%;
+  border: 6rem solid #FFEE32;
+  z-index: -1;
 }

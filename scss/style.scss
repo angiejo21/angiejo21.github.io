@@ -2,18 +2,81 @@ $primary:#FDC500;
 $secondary:#FFEE32;
 $light: #fafafa;
 $dark: #03071E;
+$headings-font-family:'Raleway', sans-serif;
 
 // import bootstap
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
+@import 'portfolio';
 
+:root{
+  --bs-body-font-family: 'Merriweather',serif;
+}
+main{
+  overflow: hidden;
+}
+h1{
+  font-size: 10rem;
+  letter-spacing: 0.5rem;
+}
+.btn {
+  border-radius: 20px;
+  font-family: $headings-font-family;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+.colorful{
+  background-image: linear-gradient(to top, $primary, $secondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.section-title{
+  letter-spacing: 0.5rem;
+}
+.nav-link{
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:var(--bs-body-color);
+  &:hover{
+    color: $primary;
+  }
+}
+
+#home .row{
+  position: relative;
+}
 #home .row .col-12::before{
   content: '';
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) ;
-  width: 60rem;
-  height: 60rem;
+  width: 50em;
+  height: 50em;
   border-radius: 50%;
-  border: 8rem solid $primary;
+  border: 6rem solid $primary;
+  z-index: -1;
+}
+#about-me img {
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+#portfolio{
+  position: relative;
+}
+#portfolio .row::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) ;
+  width: 50em;
+  height: 50em;
+  border-radius: 50%;
+  border: 6rem solid $secondary;
+  z-index: -1;
 }

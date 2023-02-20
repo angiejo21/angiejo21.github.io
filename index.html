@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +9,128 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <div class="container my-5 py-5 text-center border" id="home">
-      <div class="row py-5 border">
-        <div class="col-12 py-5 border">
-          <h1>Hi!</h1>
-          <h2 class="text-uppercase">I'm Angela Bellò<br>Junior Full-Stack Developer</h2>
+    <!-- <header>
+      <div id="toggle" onclick="toggle()">
+        <div id="h-container">
+          <span class="hamburger"></span>
         </div>
       </div>
-    </div>
+      <nav id="navigation">
+        <div class="link-list">
+          <ul>
+            <li><a href="#contact">:contact</a></li>
+            <li><a href="#portfolio">:portfolio</a></li>
+            <li><a href="#about-me">:about</a></li>
+            <li><a href="#home">:home</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header> -->
+    <main>
+      <section class="container my-5 text-center border" id="home">
+        <div class="row py-5 border">
+          <div class="col-12 py-5 border">
+            <h1 class="text-uppercase fw-bolder mb-4 colorful">Hi!</h1>
+            <h2 class="">I'm Angela Bellò</h2>
+            <h2 class="text-muted">Junior Full-Stack Developer</h2>
+          </div>
+        </div>
+      </section>
+      <section class="container my-5 border" id="about-me">
+        <div class="row py-5 border">
+          <div class="col-12 text-end border">
+            <h2 class="text-uppercase fw-bolder section-title mb-4">About me:</h2>
+          </div>
+          <div class="col-md-6 d-flex align-items-center border">
+            <div class="row">
+              <h4>I'm a <span class="colorful" id="carousel-words"></span></h4>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae architecto nihil optio perferendis aperiam minus nostrum, praesentium sed vel voluptatem explicabo impedit ex doloremque rem at laboriosam atque iste aliquid amet laborum omnis culpa quas! Ad ducimus enim laudantium. In quod ad ratione! Iure, officia eos eveniet labore voluptates delectus!</p>
+              <div class="col-12 pt-3 d-flex justify-content-center">
+                <a href="" class="btn btn-secondary col-6 shadow-lg me-2 me-md-3">Contact me</a>
+                <a href="" class="btn btn-primary col-6 shadow-lg">Resume</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 px-5 py-3 text-center border">
+            <img src="/img/IMG_20210815_120313.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </section>
+      <section class="container my-5 border" id="portfolio">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 text-end border">
+            <h2 class="text-uppercase fw-bolder section-title mb-4">Portfolio:</h2>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative border" id="l1-pomelia">
+            <div class="project d-flex justify-content-center align-items-center">
+              <a href="#" class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Hotel Pomelia</h3>
+                  <p class="text-dark">HTML - CSS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative border" id="l2-kicks">
+            <div class="project d-flex justify-content-center align-items-center">
+              <a href="#" class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Kicks Inc</h3>
+                  <p class="text-dark">Bootstrap 5 - Sass</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative border" id="l3">
+            <div class="project d-flex justify-content-center align-items-center">
+              <a href="#" class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative border" id="l4">
+            <div class="project d-flex justify-content-center align-items-center">
+              <a href="#" class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative border" id="l5">
+            <div class="project d-flex justify-content-center align-items-center">
+              <a href="#" class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative border" id="l6">
+            <div class="project d-flex justify-content-center align-items-center">
+              <a href="#" class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
