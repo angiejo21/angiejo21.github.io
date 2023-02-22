@@ -8,11 +8,12 @@ $headings-font-family:'Raleway', sans-serif;
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
 @import 'portfolio';
+@import 'decoration';
 
 :root{
   --bs-body-font-family: 'Merriweather',serif;
 }
-main{
+.page{
   overflow: hidden;
 }
 h1{
@@ -22,7 +23,8 @@ h1{
 .btn {
   border-radius: 20px;
   font-family: $headings-font-family;
-  transition: all 0.3s ease;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(.215,.61,.355,1);
 }
 .btn:hover {
   transform: scale(1.1);
@@ -35,48 +37,47 @@ h1{
 }
 .section-title{
   letter-spacing: 0.5rem;
+  text-shadow: 1px 1px 5px rgba($dark,0.25);
 }
-.nav-link{
-  font-family: $headings-font-family;
-  text-transform: uppercase;
-  font-weight: 700;
-  color:var(--bs-body-color);
+.navbar-toggler{
+  aspect-ratio: 1;
+  background-color: var(--bs-body-color);
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(.215,.61,.355,1);
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.toggler-icon{
+  color: var(--bs-body-bg)
+}
+#darkMode{
+  background-color: var(--bs-body-bg);
+  color: var(--bs-heading-color);
+  border: none;
+  transition: color 0.5s cubic-bezier(.215,.61,.355,1);
   &:hover{
     color: $primary;
   }
 }
+.nav-link{
+  text-transform: uppercase;
+  font-family: $headings-font-family;
+  text-decoration: none;
+  color: var(--bs-heading-color);
+  letter-spacing: 0.2rem;
+  transition: all 0.5s cubic-bezier(.215,.61,.355,1);
+  &:hover,
+  &:visited:hover{
+    color: $primary;
+    letter-spacing: 0.4rem;
+  }
+  &:visited{
+    color: var(--bs-heading-color);
+  }
+}
 
-#home .row{
-  position: relative;
-}
-#home .row .col-12::before{
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) ;
-  width: 50em;
-  height: 50em;
-  border-radius: 50%;
-  border: 6rem solid $primary;
-  z-index: -1;
-}
 #about-me img {
   border-radius: 50%;
   filter: grayscale(1);
-}
-#portfolio{
-  position: relative;
-}
-#portfolio .row::before{
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) ;
-  width: 50em;
-  height: 50em;
-  border-radius: 50%;
-  border: 6rem solid $secondary;
-  z-index: -1;
 }

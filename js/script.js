@@ -1,10 +1,12 @@
-// TOGGLE NAVIGATION
-function toggle() {
-  let button = document.getElementById('h-container');
-  let nav = document.getElementById('navigation');
-  button.classList.toggle('active')
-  nav.classList.toggle('active')
-}
+//DARK MODE
+document.getElementById('darkMode').addEventListener('click',()=>{
+  if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
+      document.documentElement.setAttribute('data-bs-theme','light')
+  }
+  else {
+      document.documentElement.setAttribute('data-bs-theme','dark')
+  }
+})
 
 // WORD CAROUSEL
 const words = ['Dreamer', 'Problem solver', 'Team leader','Team player', 'Traveller', 'Culture sucker', 'Language addicted', 'Art enthusiast', 'Detail oriented'];

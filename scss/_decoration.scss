@@ -1,0 +1,83 @@
+#home .row{
+  position: relative;
+}
+#home .row .col-12::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) ;
+  width: 50em;
+  height: 50em;
+  border-radius: 50%;
+  border: 6rem solid $primary;
+  z-index: -1;
+}
+#portfolio .row::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) ;
+  width: 50em;
+  height: 50em;
+  border-radius: 50%;
+  border: 6rem solid $secondary;
+  z-index: -1;
+}
+section, footer{
+  position: relative;
+}
+section::before,
+section::after{
+  content: '';
+  aspect-ratio: 1;
+  width: 300px;
+  border-radius: 50%;
+  z-index: -1;
+  position: absolute;
+  background-image: linear-gradient(45deg, rgba($dark,0.30), rgba($light,0.30));
+}
+#home::before{
+  left: -150px;
+}
+#home::after{
+  right: -150px;
+  bottom: -150px;
+}
+#about-me::after{
+  bottom: 0;
+  right: 300px;
+}
+#portfolio::before{
+  left: -150px;
+}
+#portfolio::after{
+  right: -150px;
+  bottom: -150px;
+}
+#home .row::before,
+footer::before{
+  content: '::::::';
+  font-size: 4rem;
+  z-index: -1;
+  position: absolute;
+  color: $secondary;
+  bottom: 0;
+  right: 100px;
+}
+section .row::after{
+  content: '::::::';
+  font-size: 4rem;
+  z-index: -1;
+  position: absolute;
+}
+
+#about-me .row::after{
+  right: 0;
+  bottom: 0;
+}
+#portfolio .row::after{
+  left: 0;
+  bottom: 0;
+}

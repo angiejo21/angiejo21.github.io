@@ -19,7 +19,7 @@
     background-image: linear-gradient(45deg, $primary, $secondary);
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.5s ease, visibility 0.5s;
+    transition: opacity 0.5s cubic-bezier(.215,.61,.355,1), visibility 0.5s;
   }
   &:hover .project-overlay{
     opacity: 0;
@@ -30,6 +30,10 @@
   .project::after{
     width: 80%;
     height: 80%;
+    background: url("/img/POMELIA.png");
+    background-position: center;
+    background-size:auto;
+    filter: grayscale(1);
   }
   .project-overlay{
     width: 70%;
@@ -40,6 +44,10 @@
   .project::after{
     width: 100%;
     height: 100%;
+    background: url("/img/kicks-img-s-21.png");
+    background-position: center;
+    background-size: auto;
+    filter: grayscale(1);
   }
   .project-overlay{
     width: 90%;
