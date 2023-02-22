@@ -63,8 +63,14 @@ footer::before{
   z-index: -1;
   position: absolute;
   color: $secondary;
+}
+#home .row::before{
   bottom: 0;
   right: 100px;
+}
+footer::before{
+  top: -50px;
+  right: 25px;
 }
 section .row::after{
   content: '::::::';
