@@ -9,7 +9,7 @@ document.getElementById('darkMode').addEventListener('click',()=>{
 })
 
 // WORD CAROUSEL
-const words = ['Dreamer', 'Problem solver', 'Team leader','Team player', 'Traveller', 'Culture sucker', 'Language addicted', 'Art enthusiast', 'Detail oriented'];
+const words = ['dreamer', 'problem solver', 'art enthusiast', 'team leader','team player', 'nerd', 'traveller', 'curious learner', 'culture lover', 'language addicted'];
 let counter = 0;
 let word = document.getElementById('carousel-words');
 setInterval(updateCarouselWords, 1500);
