@@ -16,9 +16,12 @@ $headings-font-family:'Raleway', sans-serif;
 .page{
   overflow: hidden;
 }
-h1{
+#home h1{
   font-size: 10rem;
   letter-spacing: 0.5rem;
+}
+h1{
+  letter-spacing:0.1 rem;
 }
 .btn {
   border-radius: 20px;
@@ -81,4 +84,8 @@ h1{
 #intro img {
   border-radius: 50%;
   filter: grayscale(1);
+}
+
+#intro i{
+  
 }

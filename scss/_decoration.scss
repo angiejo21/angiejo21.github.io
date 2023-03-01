@@ -87,3 +87,9 @@ section .row::after{
   left: 0;
   bottom: 0;
 }
+
+@media print {
+  * ::before, ::after{
+    display: none;
+  }
+}
