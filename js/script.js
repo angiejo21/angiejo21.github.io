@@ -20,6 +20,9 @@ function updateCarouselWords() {
     counter =0;
   }
 }
+//  FOOTER YEAR
+let today = new Date();
+let year = today.getFullYear();
+let currentYear = document.getElementById('current-year');
 
-const today = new Date();
-const year = today.getFullYear();
+currentYear.innerHTML = year

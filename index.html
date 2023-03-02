@@ -28,8 +28,8 @@
               <span class="toggler-icon fs-2"><i class="fa-solid fa-bars"></i></i></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header justify-content-end">
-                <button type="button" class="btn-close fs-3 mt-3 me-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <div class="offcanvas-header justify-content-end p-1 pt-4 pe-4">
+                <button type="button" class="btn-close fs-3 " data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -44,6 +44,9 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link fs-3" href="#portfolio">Portfolio:</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fs-3" href="/resume.html">Resume:</a>
                   </li>
                 </ul>
                 <hr>
@@ -96,7 +99,7 @@
               </div>
             </div>
             <div class="col-md-6 px-5 py-3 mx-auto">
-              <img src="/img/IMG_20210815_120313.jpg" alt="Angela basking on a cliff in Portugal" class="img-fluid">
+              <img src="/img/profile.jpg" alt="Angela basking on a cliff in Portugal" class="img-fluid">
             </div>
           </div>
         </section>
@@ -178,25 +181,24 @@
         <div class="row d-flex justify-content-center">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link text-center m-2 p-3" href="mailto:info@bello.codes?subject=AB.Codes Contact Form"><i class="fa-regular fa-envelope fs-3"></i></a>
+              <a class="nav-link text-center m-2 p-3" aria-current="page" href="mailto:info@bello.codes?subject=AB.Codes Contact Form"><i class="fa-regular fa-envelope fs-3"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-center m-2 p-3" href="https://github.com/angiejo21" target="_blank"><i class="fa-brands fa-github-alt fs-3"></i></a>
+              <a class="nav-link text-center m-2 p-3" aria-current="page" href="https://github.com/angiejo21" target="_blank"><i class="fa-brands fa-github-alt fs-3"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-center m-2 p-3" href="https://www.linkedin.com/in/angelabello/" target="_blank"><i class="fa-brands fa-linkedin-in fs-3"></i></a>
+              <a class="nav-link text-center m-2 p-3" aria-current="page" href="https://www.linkedin.com/in/angelabello/" target="_blank"><i class="fa-brands fa-linkedin-in fs-3"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-center m-2 p-3" aria-current="page" href="https://www.instagram.com/angiejo21" target="_blank"><i class="fa-brands fa-instagram fs-3"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-center m-2 p-3" href="https://talent.start2impact.it/profile/angela-bello" target="_blank"><i class="fa-solid fa-rocket fs-3"></i></a>
+              <a class="nav-link text-center m-2 p-3" aria-current="page" href="https://talent.start2impact.it/profile/angela-bello" target="_blank"><i class="fa-solid fa-rocket fs-3"></i></a>
             </li>
           </ul>
-          <hr>
           <div class="col-12 m-3 d-flex justify-content-center">
-            <p class="text-muted">Copyright © <span class="colorful">Angela Bellò</span> <span x-text="today.getFullYear()"></span></p>
-            </div>
+            <p class="text-muted">Copyright © <span id="current-year"class="me-1"></span><span class="text-primary">Angela Bellò</span></p>
+          </div>
         </div>
       </footer>
     </div>
