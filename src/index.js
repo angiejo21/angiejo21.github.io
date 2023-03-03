@@ -1,10 +1,13 @@
+
+import 'bootstrap';
+
 //DARK MODE
 document.getElementById('darkMode').addEventListener('click',()=>{
   if (document.documentElement.getAttribute('data-bs-theme') == 'dark') {
       document.documentElement.setAttribute('data-bs-theme','light')
-  }
+    }
   else {
-      document.documentElement.setAttribute('data-bs-theme','dark')
+    document.documentElement.setAttribute('data-bs-theme','dark')
   }
 })
 
@@ -26,3 +29,14 @@ let year = today.getFullYear();
 let currentYear = document.getElementById('current-year');
 
 currentYear.innerHTML = year
+
+//SPINNER
+const spinnerWrapperEl = document.querySelector('.spinner-wrapper');
+
+window.addEventListener('load', () => {
+  spinnerWrapperEl.style.opacity = '0';
+
+  setTimeout(() => {
+    spinnerWrapperEl.style.display = 'none';
+  }, 300);
+});

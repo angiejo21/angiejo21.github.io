@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="I'm Angela, a Junior Full Stack Developer passionate about merging logic and creativity for innovative solutions. Let's bring your ideas to life!">
+  <title>ABC | Angela Bello's portfolio</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/dist/images/favicon_io/apple-touch-icon.ico">
+  <link rel="icon" type="image/ico" sizes="32x32" href="/dist/images/favicon_io/favicon-32x32.ico">
+  <link rel="icon" type="image/ico" sizes="16x16" href="/dist/images/favicon_io/favicon-16x16.ico">
+  <meta property="og:title" content="ABC | Angela Bello's portfolio" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bello.codes" />
+  <meta property="og:image" content="https://bello.codes/images/cover.png" />
+  <script defer="defer" src="main.bundle.js"></script>
+  <link href="styles.bundle.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="spinner-wrapper justify-content-center align-items-center">
+    <div class="spinner-grow text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+  <div class="page">
+    <header class="container-fluid">
+      <nav class="navbar fixed-top">
+        <div class="container-fluid d-flex justify-content-end m-4"><button class="navbar-toggler p-4" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><span
+              class="toggler-icon fs-2"><i class="fa-solid fa-bars"></i></span></button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header justify-content-end p-1 pt-4 pe-4"><button type="button" class="btn-close fs-3"
+                data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item"><button type="button" class="fs-3 ps-0" aria-label="" id="darkMode"><i
+                      class="fa-solid fa-circle-half-stroke"></i></button></li>
+                <li class="nav-item"><a class="nav-link fs-3" aria-current="page" href="#home">Home:</a></li>
+                <li class="nav-item"><a class="nav-link fs-3" href="#about-me">About-me:</a></li>
+                <li class="nav-item"><a class="nav-link fs-3" href="#portfolio">Portfolio:</a></li>
+                <li class="nav-item"><a class="nav-link fs-3" href="/dist/resume.html">Resume:</a></li>
+              </ul>
+              <hr>
+              <h5 class="colorful">Get in touch</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link px-0"
+                    href="mailto:info@bello.codes?subject=AB.Codes Contact Form"><i
+                      class="fa-regular fa-envelope fs-3 me-3"></i>Mail-me</a></li>
+                <li class="nav-item"><a class="nav-link px-0" href="https://github.com/angiejo21" target="_blank"><i
+                      class="fa-brands fa-github-alt fs-3 me-3"></i>Git-hub</a></li>
+                <li class="nav-item"><a class="nav-link px-0" href="https://www.linkedin.com/in/angelabello/"
+                    target="_blank"><i class="fa-brands fa-linkedin-in fs-3 me-3"></i>Linkedin</a></li>
+                <li class="nav-item"><a class="nav-link px-0 active" aria-current="page"
+                    href="https://www.instagram.com/angiejo21" target="_blank"><i
+                      class="fa-brands fa-instagram fs-3 me-3"></i>Instagram</a></li>
+                <li class="nav-item"><a class="nav-link px-0" href="https://talent.start2impact.it/profile/angela-bello"
+                    target="_blank"><i class="fa-solid fa-rocket fs-3 me-3"></i>Start2impact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container my-5 text-center" id="home">
+        <div class="row py-5">
+          <div class="col-12 py-5">
+            <h1 class="text-uppercase fw-bolder mb-4 colorful">Hi!</h1>
+            <h2 class="">I'm Angela Bellò</h2>
+            <h2 class="text-muted">Junior Full-Stack Developer</h2>
+          </div>
+        </div>
+      </section>
+      <section class="container my-5" id="about-me">
+        <div class="row py-5">
+          <div class="col-12 text-end">
+            <h2 class="text-uppercase fw-bolder section-title mb-4">About me:</h2>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+            <div class="row">
+              <h4>I'm a <span class="colorful" id="carousel-words"></span></h4>
+              <p>Hi there! I'm Angela, a Junior Full Stack Developer based in Italy. With my background in languages and
+                my love for technology, I've found a perfect match in the world of coding. I'm always on a mission to
+                learn and grow, continuously expanding my skills and knowledge to stay ahead of the game.</p>
+              <div class="col-12 pt-3 d-flex justify-content-center"><a
+                  class="btn btn-secondary col-6 shadow-lg me-2 me-md-4"
+                  href="mailto:info@bello.codes?subject=AB.Codes Contact Form">Mail me</a> <a href="/dist/resume.html"
+                  class="btn btn-primary col-6 shadow-lg">Resume</a></div>
+            </div>
+          </div>
+          <div class="col-md-6 px-5 py-3 mx-auto"><img src="/dist/images/profile.jpg"
+              alt="Angela basking on a cliff in Portugal" class="img-fluid"></div>
+        </div>
+      </section>
+      <section class="container my-5 pb-5" id="portfolio">
+        <div class="row d-flex mb-5 justify-content-center">
+          <div class="col-12 text-end">
+            <h2 class="text-uppercase fw-bolder section-title mb-4">Portfolio:</h2>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative" id="l1-pomelia">
+            <div class="project d-flex justify-content-center align-items-center"><a href="https://pomelia.bello.codes"
+                class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Hotel Pomelia</h3>
+                  <p class="text-dark">Canva - HTML - CSS</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative" id="l2-kicks">
+            <div class="project d-flex justify-content-center align-items-center"><a href="https://kicks.bello.codes"
+                class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Kicks Inc</h3>
+                  <p class="text-dark">Canva - Bootstrap 5 - Sass</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative" id="l3">
+            <div class="project d-flex justify-content-center align-items-center"><a href="#"
+                class="btn btn-primary col-6 text-uppercase disabled">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative" id="l4">
+            <div class="project d-flex justify-content-center align-items-center"><a href="#"
+                class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative" id="l5">
+            <div class="project d-flex justify-content-center align-items-center"><a href="#"
+                class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 position-relative" id="l6">
+            <div class="project d-flex justify-content-center align-items-center"><a href="#"
+                class="btn btn-primary col-6 text-uppercase">More</a>
+              <div class="project-overlay text-center d-flex justify-content-center align-items-center">
+                <div class="col-10">
+                  <h3 class="text-dark">Lorem ipsum</h3>
+                  <p class="text-dark">Coming soon</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="container my-5">
+      <div class="row d-flex justify-content-center">
+        <ul class="nav justify-content-center">
+          <li class="nav-item"><a class="nav-link text-center m-2 p-3" aria-current="page"
+              href="mailto:info@bello.codes?subject=AB.Codes Contact Form"><i
+                class="fa-regular fa-envelope fs-3"></i></a></li>
+          <li class="nav-item"><a class="nav-link text-center m-2 p-3" aria-current="page"
+              href="https://github.com/angiejo21" target="_blank"><i class="fa-brands fa-github-alt fs-3"></i></a></li>
+          <li class="nav-item"><a class="nav-link text-center m-2 p-3" aria-current="page"
+              href="https://www.linkedin.com/in/angelabello/" target="_blank"><i
+                class="fa-brands fa-linkedin-in fs-3"></i></a></li>
+          <li class="nav-item"><a class="nav-link text-center m-2 p-3" aria-current="page"
+              href="https://www.instagram.com/angiejo21" target="_blank"><i class="fa-brands fa-instagram fs-3"></i></a>
+          </li>
+          <li class="nav-item"><a class="nav-link text-center m-2 p-3" aria-current="page"
+              href="https://talent.start2impact.it/profile/angela-bello" target="_blank"><i
+                class="fa-solid fa-rocket fs-3"></i></a></li>
+        </ul>
+        <div class="col-12 m-3 d-flex justify-content-center">
+          <p class="text-muted">Copyright © <span id="current-year" class="me-1"></span><span
+              class="text-primary">Angela Bellò</span></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+    integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
