@@ -11714,10 +11714,10 @@ textarea.form-control-lg {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 50em;
-  height: 50em;
+  width: 40em;
+  height: 40em;
   border-radius: 50%;
-  border: 6rem solid #FDC500;
+  border: 4rem solid #FDC500;
   z-index: -1;
 }
 
@@ -11841,7 +11841,9 @@ footer::before {
 .page {
   overflow: hidden;
 }
-
+.page main{
+  margin-top: 6rem;
+}
 #home h1, #home .h1 {
   font-size: 10rem;
   letter-spacing: 0.5rem;
