@@ -11841,7 +11841,7 @@ footer::before {
 .page {
   overflow: hidden;
 }
-.page main{
+#index{
   margin-top: 8rem;
 }
 #home h1, #home .h1 {
