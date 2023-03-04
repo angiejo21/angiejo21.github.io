@@ -7,9 +7,9 @@
   <meta name="description"
     content="I'm Angela, a Junior Full Stack Developer passionate about merging logic and creativity for innovative solutions. Let's bring your ideas to life!">
   <title>ABC | Angela Bellò's Resume</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/dist/images/favicon_io/apple-touch-icon.ico">
-  <link rel="icon" type="image/ico" sizes="32x32" href="/dist/images/favicon_io/favicon-32x32.ico">
-  <link rel="icon" type="image/ico" sizes="16x16" href="/dist/images/favicon_io/favicon-16x16.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.ico">
+  <link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon_io/favicon-32x32.ico">
+  <link rel="icon" type="image/ico" sizes="16x16" href="/images/favicon_io/favicon-16x16.ico">
   <meta property="og:title" content="ABC | Angela Bello's Resume" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bello.codes/resume" />
@@ -30,10 +30,10 @@
     <header class="d-flex align-items-center justify-content-end py-3 pe-3 mb-4 d-print-none">
       <ul class="nav col-12 justify-content-end ">
         <li class="nav-item">
-          <a class="nav-link fs-3" aria-current="page" href="/dist/index.html">Home:</a>
+          <a class="nav-link fs-3" href="/index.html">Home:</a>
         </li>
         <li class="nav-item d-flex justify-content-center align-items-center">
-          <button type="button" class="fs-3 " aria-label="" id="darkMode"><i class="fa-solid fa-circle-half-stroke"></i></button>
+          <button type="button" class="fs-3 " aria-label="Toggle dark mode" id="darkMode"><i class="fa-solid fa-circle-half-stroke"></i></button>
         </li>
       </ul>
     </header>
@@ -49,18 +49,18 @@
       <section class="container-sm px-md-5 pt-md-3 p-1 d-flex justify-content-center flex-wrap" id="main">
         <div class="col-12 row d-print-flex flex-row">
           <div class="col-6 d-flex align-items-center justify-content-center">
-            <img src="/dist/images/profile.jpg" alt="Angela basking on a cliff in Portugal" class="img-fluid w-75">
+            <img src="/images/profile.jpg" alt="Angela basking on a cliff in Portugal" class="img-fluid w-75">
           </div>
           <div class="col-6 d-flex flex-column">
             <h2 class="text-uppercase text-end text-primary">About-me:</h2>
-            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-location-dot"></i>Bassano del Grappa, Italy</p>
-            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-cake-candles"></i>1990</p>
+            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-location-dot" aria-label="Address"></i>Bassano del Grappa, Italy</p>
+            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-cake-candles" aria-label="Birth year"></i>1990</p>
             <h2 class="text-uppercase text-end text-primary">Contacts:</h2>
-            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-mobile-screen"></i>+39 3386309379</p>
-            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-regular fa-paper-plane"></i>info@bello.codes</p>
-            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-globe"></i>bello.codes</p>
-            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-brands fa-linkedin-in"></i>angelabello</p>
-            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-brands fa-github-alt"></i>angiejo21</p>
+            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-mobile-screen" aria-label="Phone number"></i>+39 3386309379</p>
+            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-regular fa-paper-plane" aria-label="Email"></i>info@bello.codes</p>
+            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-solid fa-globe" aria-label="website"></i>bello.codes</p>
+            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-brands fa-linkedin-in" aria-label="LinkedIn profile"></i>angelabello</p>
+            <p class="mb-1 mb-sm-2"><i class="text-secondary me-1 me-sm-3 fa-brands fa-github-alt" aria-label="Github Profile"></i>angiejo21</p>
           </div>
         </div>
         <div class="col-12">
@@ -72,70 +72,106 @@
         <div class="col-12 row">
           <div class="col-md-6">
             <h2 class="text-uppercase text-end text-primary mb-2">education:</h2>
-            <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Full-stack Web developer</h5>
-            <p class="border-start border-2 border-primary ps-3 mb-1">Start2impact university - 2023</p>
-            <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Fundamentals of Project Planning and Management</h5>
-            <p class="border-start border-2 border-primary ps-3 mb-1">University of Virginia/Coursera.com - 2017</p>
-            <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Bachelor's degree in Linguistic and Cultural Mediation</h5>
-            <p class="border-start border-2 border-primary ps-3 mb-1">University of Venice - 2016</p>
+            <ul class="list-unstyled">
+              <li>
+                <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Full-stack Web developer</h5>
+                <p class="border-start border-2 border-primary ps-3 mb-1">Start2impact university - 2023</p>
+              </li>
+              <li>
+                <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Fundamentals of Project Planning and Management</h5>
+                <p class="border-start border-2 border-primary ps-3 mb-1">University of Virginia/Coursera.com - 2017</p>
+              </li>
+              <li>
+                <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Bachelor's degree in Linguistic and Cultural Mediation</h5>
+                <p class="border-start border-2 border-primary ps-3 mb-1">University of Venice - 2016</p>
+              </li>
+            </ul>
           </div>
           <div class="col-md-6">
             <h2 class="text-uppercase text-end text-primary mb-2">experience:</h2>
-            <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Faber Mobili - Executive assistant/Project Manager</h5>
-            <p class="border-start border-2 border-primary ps-3 mb-1">2018-2022</p>
-            <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Decathlon - Seller</h5>
-            <p class="border-start border-2 border-primary ps-3 mb-1">2016</p>
-            <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> AIESEC Venice - TM IGDP (Incoming Global Development Program)</h5>
-            <p class="border-start border-2 border-primary ps-3 mb-1">2014</p>
+            <ul class="list-unstyled">
+              <li>
+                <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Faber Mobili - Executive assistant/Project Manager</h5>
+                <p class="border-start border-2 border-primary ps-3 mb-1">2018-2022</p>
+              </li>
+              <li>
+                <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> Decathlon - Seller</h5>
+                <p class="border-start border-2 border-primary ps-3 mb-1">2015-2016</p>
+              </li>
+              <li>
+                <h5 class="mb-0"><span class="text-primary me-1">&#x2022;</span> AIESEC Venice - TM IGDP (Incoming Global Development Program)</h5>
+                <p class="border-start border-2 border-primary ps-3 mb-1">2014</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
       <section class="container-sm px-md-5 pt-md-3 p-1 d-flex justify-content-center" id="skills">
         <div class="col-12 row">
           <h2 class="text-uppercase text-end text-primary mb-3">skills:</h2>
-          <div class="col-12 p-0 mb-3">
-              <div class="btn btn-primary d-inline-block m-1 px-3">Problem solving</div>
-              <div class="btn btn-primary d-inline-block m-1 px-3">Flexibility</div>
-              <div class="btn btn-primary d-inline-block m-1 px-3">Autonomy</div>
-              <div class="btn btn-primary d-inline-block m-1 px-3">Creativity</div>
-              <div class="btn btn-primary d-inline-block m-1 px-3">Organization</div>
-          </div>
+          <ul class="col-12 p-0 mb-3 list-unstyled">
+              <li class="btn btn-primary d-inline-block m-1 px-3">Problem solving</li>
+              <li class="btn btn-primary d-inline-block m-1 px-3">Flexibility</li>
+              <li class="btn btn-primary d-inline-block m-1 px-3">Autonomy</li>
+              <li class="btn btn-primary d-inline-block m-1 px-3">Creativity</li>
+              <li class="btn btn-primary d-inline-block m-1 px-3">Organization</li>
+          </ul>
           <div class="col-12 row">
             <div class="col-6">
-              <h5>HTML</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="HTML" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 75%"></div>
-              </div>
-              <h5>CSS</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="CSS" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 50%"></div>
-              </div>
-              <h5>SASS</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="SASS" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 25%"></div>
-              </div>
-              <h5>JS</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="JS" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 10%"></div>
-              </div>
+              <ul class="list-unstyled">
+                <li>
+                  <h5>HTML</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="HTML" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 75%"></div>
+                  </div>
+                </li>
+                <li>
+                  <h5>CSS</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="CSS" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%"></div>
+                  </div>
+                </li>
+                <li>
+                  <h5>SASS</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="SASS" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 25%"></div>
+                  </div>
+                </li>
+                <li>
+                  <h5>JS</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="JS" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 10%"></div>
+                  </div>
+                </li>
+              </ul>
             </div>
             <div class="col-6">
-              <h5>Bootstrap 5</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="Bootstrap5" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 50%"></div>
-              </div>
-              <h5>Tailwind</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="Tailwind" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 10%"></div>
-              </div>
-              <h5>Office</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="Office" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 90%"></div>
-              </div>
-              <h5>Photoshop</h5>
-              <div class="progress mb-2" role="progressbar" aria-label="Office" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar" style="width: 50%"></div>
-              </div>
+              <ul class="list-unstyled">
+                <li>
+                  <h5>Bootstrap 5</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="Bootstrap5" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%"></div>
+                  </div>
+                </li>
+                <li>
+                  <h5>Tailwind</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="Tailwind" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 10%"></div>
+                  </div>
+                </li>
+                <li>
+                  <h5>Office</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="Office" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li>
+                  <h5>Photoshop</h5>
+                  <div class="progress mb-2" role="progressbar" aria-label="Office" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" style="width: 50%"></div>
+                </li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>
@@ -144,41 +180,45 @@
         <div class="col-12 row d-flex justify-content-center">
           <div class="col-md-4">
             <h2 class="text-uppercase text-end text-primary">Languages:</h2>
-            <div class="col-12">
-              <h5 class="mb-0">Italian</h5><p class="mb-1">Native</p>
-            </div>
-            <div class="col-12">
-              <h5 class="mb-0">English</h5><p class="mb-1">C1</p>
-            </div>
-            <div class="col-12">
-              <h5 class="mb-0">Spanish</h5><p class="mb-1">B2</p>
-            </div>
-            <div class="col-12">
-              <h5 class="mb-0">German, French, Portuguese</h5><p class="mb-1">A1</p>
-            </div>
+            <ul class="list-unstyled">
+              <li class="col-12">
+                <h5 class="mb-0">Italian</h5><p class="mb-1">Native</p>
+              </li>
+              <li class="col-12">
+                <h5 class="mb-0">English</h5><p class="mb-1">C1</p>
+              </li>
+              <li class="col-12">
+                <h5 class="mb-0">Spanish</h5><p class="mb-1">B2</p>
+              </li>
+              <li class="col-12">
+                <h5 class="mb-0">German, French, Portuguese</h5><p class="mb-1">A1</p>
+              </li>
+            </ul>
           </div>
           <div class="col-md-4">
             <h2 class="text-uppercase text-end text-primary">Interests:</h2>
-            <div class="col-12">
-              <h5><i class="text-secondary me-3 fa-regular fa-compass"></i>Travelling</h5>
-            </div>
-            <div class="col-12">
-              <h5><i class="text-secondary me-3 fa-solid fa-palette"></i>Art & Design</h5>
-            </div>
-            <div class="col-12">
-              <h5><i class="text-secondary me-3 fa-solid fa-music"></i>Musicals</h5>
-            </div>
-            <div class="col-12">
-              <h5><i class="text-secondary me-3 fa-solid fa-puzzle-piece"></i>Puzzles</h5>
-            </div>
-            <div class="col-12">
-              <h5><i class="text-secondary me-3 fa-solid fa-microchip"></i>Technology</h5>
-            </div>
+            <ul class="list-unstyled">
+              <li class="col-12">
+                <h5><i class="text-secondary me-3 fa-regular fa-compass" aria-hidden="true"></i>Travelling</h5>
+              </li>
+              <li class="col-12">
+                <h5><i class="text-secondary me-3 fa-solid fa-palette" aria-hidden="true"></i>Art & Design</h5>
+              </li>
+              <li class="col-12">
+                <h5><i class="text-secondary me-3 fa-solid fa-music" aria-hidden="true"></i>Musicals</h5>
+              </li>
+              <li class="col-12">
+                <h5><i class="text-secondary me-3 fa-solid fa-puzzle-piece" aria-hidden="true"></i>Puzzles</h5>
+              </li>
+              <li class="col-12">
+                <h5><i class="text-secondary me-3 fa-solid fa-microchip" aria-hidden="true"></i>Technology</h5>
+              </li>
+            </ul>
           </div>
           <div class="col-md-4">
             <h2 class="text-uppercase text-end text-primary">Portfolio:</h2>
             <figure class=" d-print-flex justify-content-start">
-              <img src="/dist/images/qr.png" alt="qr to portfolio" class="img-fluid">
+              <img src="/images/qr.png" alt="qr to portfolio" class="img-fluid">
             </figure>
           </div>
         </div>
