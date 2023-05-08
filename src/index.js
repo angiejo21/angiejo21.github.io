@@ -1,4 +1,4 @@
-// import 'bootstrap';
+// import "../../node_modules/bootstrap/dist/js/bootstrap";
 
 //DARK MODE
 document.getElementById("darkMode").addEventListener("click", () => {
