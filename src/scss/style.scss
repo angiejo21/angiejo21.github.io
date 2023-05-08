@@ -1,84 +1,93 @@
-$primary:#FDC500;
-$secondary:#FFEE32;
-$light: #FFFDEB;
+$primary: #fdc500;
+$secondary: #ffee32;
+$light: #fffdeb;
 $dark: #141000;
-$headings-font-family:'Raleway', sans-serif;
+$headings-font-family: "Raleway", sans-serif;
 
 // import bootstap
-@import '../../node_modules/bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap');
-@import 'portfolio';
-@import 'decoration';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
+@import "portfolio";
+@import "decoration";
 
-:root{
-  --bs-body-font-family: 'Merriweather',serif;
+:root {
+  --bs-body-font-family: "Merriweather", serif;
 }
-.page{
+.page {
   overflow: hidden;
 }
-.page main{
+.page main {
   margin-top: 6rem;
 }
-#home h1{
+button {
+  border: none;
+  background-color: transparent;
+}
+button:hover,
+button:active,
+button:visited {
+  color: var(--bs-heading-color);
+}
+#home h1 {
   font-size: 10rem;
   letter-spacing: 0.5rem;
 }
-h1{
-  letter-spacing:0.1 rem;
+h1 {
+  letter-spacing: 0.1 rem;
 }
 .btn {
   border-radius: 20px;
   font-family: $headings-font-family;
   text-transform: uppercase;
-  transition: all 0.3s cubic-bezier(.215,.61,.355,1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .btn:hover {
   transform: scale(1.1);
 }
-.colorful{
+.colorful {
   background-image: linear-gradient(to top, $primary, $secondary);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.section-title{
+.section-title {
   letter-spacing: 0.5rem;
-  text-shadow: 1px 1px 5px rgba($dark,0.25);
+  text-shadow: 1px 1px 5px rgba($dark, 0.25);
 }
-.navbar-toggler{
+.navbar-toggler {
   aspect-ratio: 1;
   background-color: var(--bs-body-color);
   border-radius: 50%;
-  transition: 0.5s cubic-bezier(.215,.61,.355,1);
-  &:hover{
+  transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  &:hover {
     transform: scale(1.1);
   }
 }
-.toggler-icon{
-  color: var(--bs-body-bg)
+.toggler-icon {
+  color: var(--bs-body-bg);
 }
-#darkMode{
+#darkMode {
   background-color: var(--bs-body-bg);
   color: var(--bs-heading-color);
   border: none;
-  transition: color 0.5s cubic-bezier(.215,.61,.355,1);
-  &:hover{
+  transition: color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  &:hover {
     color: $primary;
   }
 }
-.nav-link{
+.nav-link {
   text-transform: uppercase;
   font-family: $headings-font-family;
   text-decoration: none;
   color: var(--bs-heading-color);
   letter-spacing: 0.2rem;
-  transition: all 0.5s cubic-bezier(.215,.61,.355,1);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
   &:hover,
-  &:visited:hover{
+  &:visited:hover {
     color: $primary;
     letter-spacing: 0.4rem;
   }
-  &:visited{
+  &:visited {
     color: var(--bs-heading-color);
   }
 }
@@ -89,11 +98,10 @@ h1{
   filter: grayscale(1);
 }
 
-#other img{
-  filter: invert(0.50);
-
+#other img {
+  filter: invert(0.5);
 }
-.progress{
+.progress {
   height: 3px;
 }
 .spinner-wrapper {
@@ -107,9 +115,9 @@ h1{
   transition: opacity 0.3s;
   display: flex;
 }
- @media print {
+@media print {
   #main img,
-  #other img{
+  #other img {
     max-width: 180px;
   }
   .progress {
@@ -117,7 +125,7 @@ h1{
   }
   .progress:before {
     display: block;
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;

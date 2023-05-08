@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="I'm Angela, a Junior Full Stack Developer passionate about merging logic and creativity for innovative solutions. Let's bring your ideas to life!">
     <title>ABC | Angela Bello's portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+      emailjs.init("wNYLO_AraMPVIam0V");
+      })();
+    </script>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/src/images/favicon_io/apple-touch-icon.ico">
     <link rel="icon" type="image/ico" sizes="32x32" href="/src/images/favicon_io/favicon-32x32.ico">
@@ -25,6 +31,41 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-uppercase" id="modal-title">C o n t a c t - m e</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="contact-form">
+              <input type="hidden" name="contact_number">
+              <div class="row mb-3 g-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="First name" name="first_name" aria-label="First name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Last name" name="last_name" aria-label="Last name">
+                </div>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="name@example.com" name="email">
+              </div>
+              <div class="">
+                <textarea class="form-control" placeholder="Message" style="height: 100px" name="message"></textarea>
+              </div>
+              <div class="mt-3">
+                <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="page">
       <header class="container-fluid">
         <nav class="navbar fixed-top">
@@ -41,13 +82,13 @@
                   <li class="nav-item">
                     <button type="button" class="fs-3 ps-0" aria-label="Toggle dark mode" id="darkMode"><i class="fa-solid fa-circle-half-stroke"></i></button>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" data-bs-dismiss="offcanvas">
                     <a class="nav-link fs-3" aria-current="page" href="#home">Home:</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" data-bs-dismiss="offcanvas">
                     <a class="nav-link fs-3" href="#about-me">About-me:</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item" data-bs-dismiss="offcanvas">
                     <a class="nav-link fs-3" href="#portfolio">Portfolio:</a>
                   </li>
                   <li class="nav-item">
@@ -57,18 +98,17 @@
                 <hr>
                 <h5 class="colorful">Get in touch</h5>
                 <ul class="nav flex-column">
-                  <li class="nav-item"><a class="nav-link px-0"
-                    href="mailto:info@bello.codes?subject=AB.Codes Contact Form"><i
-                      class="fa-regular fa-envelope fs-3 me-3" aria-label="Mail me"></i>Mail-me</a></li>
-                <li class="nav-item"><a class="nav-link px-0" href="https://github.com/angiejo21" target="_blank" rel="noopener noreferrer" aria-label="Visit my Github profile"><i
-                      class="fa-brands fa-github-alt fs-3 me-3"></i>Git-hub</a></li>
-                <li class="nav-item"><a class="nav-link px-0" href="https://www.linkedin.com/in/angelabello/"
-                    target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><i class="fa-brands fa-linkedin-in fs-3 me-3"></i>LinkedIn</a></li>
-                <li class="nav-item"><a class="nav-link px-0 active" aria-current="page"
-                    href="https://www.instagram.com/angiejo21" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile"><i
-                      class="fa-brands fa-instagram fs-3 me-3"></i>Instagram</a></li>
-                <li class="nav-item"><a class="nav-link px-0" href="https://talent.start2impact.it/profile/angela-bello"
-                    target="_blank" rel="noopener noreferrer" aria-label="Visit my Start2impact profile"><i class="fa-solid fa-rocket fs-3 me-3"></i>Start2impact</a></li>
+                  <li class="nav-item"><button type="button" class="nav-link px-0" data-bs-toggle="modal" data-bs-target="#contactModal"><i
+                      class="fa-regular fa-envelope fs-3 me-3" aria-label="Contact me"></i>Contact-me</button></li>
+                  <li class="nav-item"><a class="nav-link px-0" href="https://github.com/angiejo21" target="_blank" rel="noopener noreferrer" aria-label="Visit my Github profile"><i
+                        class="fa-brands fa-github-alt fs-3 me-3"></i>Git-hub</a></li>
+                  <li class="nav-item"><a class="nav-link px-0" href="https://www.linkedin.com/in/angelabello/"
+                      target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><i class="fa-brands fa-linkedin-in fs-3 me-3"></i>LinkedIn</a></li>
+                  <li class="nav-item"><a class="nav-link px-0 active" aria-current="page"
+                      href="https://www.instagram.com/angiejo21" target="_blank" rel="noopener noreferrer" aria-label="Visit my Instagram profile"><i
+                        class="fa-brands fa-instagram fs-3 me-3"></i>Instagram</a></li>
+                  <li class="nav-item"><a class="nav-link px-0" href="https://talent.start2impact.it/profile/angela-bello"
+                      target="_blank" rel="noopener noreferrer" aria-label="Visit my Start2impact profile"><i class="fa-solid fa-rocket fs-3 me-3"></i>Start2impact</a></li>
                 </ul>
               </div>
             </div>
@@ -182,17 +222,17 @@
       <footer class="container my-5">
         <div class="row d-flex justify-content-center">
           <ul class="nav justify-content-center">
-            <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="mailto:info@bello.codes?subject=AB.Codes Contact Form"><i
-              class="fa-regular fa-envelope fs-3" aria-label="Mail me"></i></a></li>
-        <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://github.com/angiejo21" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github-alt fs-3" aria-label="Visit my Github profile"></i></a></li>
-        <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://www.linkedin.com/in/angelabello/" target="_blank" rel="noopener noreferrer"><i
-              class="fa-brands fa-linkedin-in fs-3" aria-label="Visit my LinkedIn profile"></i></a></li>
-        <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://www.instagram.com/angiejo21" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fs-3" aria-label="Visit my Instagram profile"></i></a>
-        </li>
-        <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://talent.start2impact.it/profile/angela-bello" target="_blank" rel="noopener noreferrer"><i
-              class="fa-solid fa-rocket fs-3" aria-label="Visit my Start2impact profile"></i></a></li>
-          </ul>
-          <div class="col-12 m-3 d-flex justify-content-center">
+            <li class="nav-item"><button type="button" class="nav-link px-0" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+              class="fa-regular fa-envelope fs-3" aria-label="Mail me"></i></button></li>
+            <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://github.com/angiejo21" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github-alt fs-3" aria-label="Visit my Github profile"></i></a></li>
+            <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://www.linkedin.com/in/angelabello/" target="_blank" rel="noopener noreferrer"><i
+                  class="fa-brands fa-linkedin-in fs-3" aria-label="Visit my LinkedIn profile"></i></a></li>
+            <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://www.instagram.com/angiejo21" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fs-3" aria-label="Visit my Instagram profile"></i></a>
+            </li>
+            <li class="nav-item"><a class="nav-link text-center m-2 p-3" href="https://talent.start2impact.it/profile/angela-bello" target="_blank" rel="noopener noreferrer"><i
+                  class="fa-solid fa-rocket fs-3" aria-label="Visit my Start2impact profile"></i></a></li>
+              </ul>
+              <div class="col-12 m-3 d-flex justify-content-center">
             <p class="text-muted">Copyright © <span id="current-year"class="me-1"></span><span class="text-primary">Angela Bellò</span></p>
           </div>
         </div>
