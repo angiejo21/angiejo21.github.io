@@ -51,6 +51,8 @@ window.addEventListener("load", () => {
 });
 
 //EmailJS
+const success = document.getElementById("success");
+const form = document.getElementById("contact_form");
 
 window.onload = function () {
   document
@@ -63,6 +65,8 @@ window.onload = function () {
       emailjs.sendForm("contact_service", "contact_form", this).then(
         function () {
           console.log("SUCCESS!");
+          form.classList.add("d-none");
+          success.classList.remove("d-none");
         },
         function (error) {
           console.log("FAILED...", error);
