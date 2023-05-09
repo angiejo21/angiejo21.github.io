@@ -4243,7 +4243,7 @@ window.addEventListener("load", () => {
 });
 
 const success = document.getElementById("success");
-const form = document.getElementById("contact_form");
+const form = document.getElementById("contact-form");
 window.onload = function () {
   document
     .getElementById("contact-form")
