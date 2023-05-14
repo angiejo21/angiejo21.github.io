@@ -1,9 +1,8 @@
-
-.project{
+.project {
   aspect-ratio: 1;
   position: relative;
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     z-index: -1;
     border-radius: 50%;
@@ -12,36 +11,37 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .project-overlay{
+  .project-overlay {
     position: absolute;
     z-index: 2;
     border-radius: 50%;
     background-image: linear-gradient(45deg, $primary, $secondary);
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.5s cubic-bezier(.215,.61,.355,1), visibility 0.5s;
+    transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+      visibility 0.5s;
   }
-  &:hover .project-overlay{
+  &:hover .project-overlay {
     opacity: 0;
     visibility: hidden;
   }
 }
-#l1-pomelia{
-  .project::after{
+#l1-pomelia {
+  .project::after {
     width: 80%;
     height: 80%;
     background: url("/src/images/POMELIA.png");
     background-position: center;
-    background-size:auto;
+    background-size: auto;
     filter: grayscale(1);
   }
-  .project-overlay{
+  .project-overlay {
     width: 70%;
     height: 70%;
   }
 }
-#l2-kicks{
-  .project::after{
+#l2-kicks {
+  .project::after {
     width: 100%;
     height: 100%;
     background: url("/src/images/kicks-img-s-21.png");
@@ -49,17 +49,17 @@
     background-size: auto;
     filter: grayscale(1);
   }
-  .project-overlay{
+  .project-overlay {
     width: 90%;
     height: 90%;
   }
 }
-#l3{
-  .project::after{
+#l3-counter {
+  .project::after {
     width: 80%;
     height: 80%;
   }
-  .project-overlay{
+  .project-overlay {
     width: 70%;
     height: 70%;
   }
@@ -72,36 +72,38 @@
   //   height: 80%;
   // }
 }
-#l4{
-  .project::after{
+#l4 {
+  .project::after {
     width: 85%;
     height: 85%;
   }
-  .project-overlay{
+  .project-overlay {
     width: 75%;
     height: 75%;
   }
 }
-#l5{
-  .project::after{
+#l5 {
+  .project::after {
     width: 75%;
     height: 75%;
   }
-  .project-overlay{
+  .project-overlay {
     width: 65%;
     height: 65%;
   }
 }
-#l6{
-  .project::after{
+#l6 {
+  .project::after {
     width: 95%;
     height: 95%;
   }
-  .project-overlay{
+  .project-overlay {
     width: 85%;
     height: 85%;
   }
 }
-#l4, #l5, #l6 {
+#l4,
+#l5,
+#l6 {
   display: none;
 }

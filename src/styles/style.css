@@ -12012,11 +12012,15 @@ fieldset:disabled .btn {
   height: 90%;
 }
 
-#l3 .project::after {
+#l3-counter .project::after {
   width: 80%;
   height: 80%;
+  background: url("/src/images/counter.png");
+  background-position: center;
+  background-size: auto;
+  filter: grayscale(1);
 }
-#l3 .project-overlay {
+#l3-counter .project-overlay {
   width: 70%;
   height: 70%;
 }
