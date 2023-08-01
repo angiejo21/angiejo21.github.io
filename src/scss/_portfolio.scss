@@ -26,11 +26,11 @@
     visibility: hidden;
   }
 }
-#l1-pomelia {
+#l1-hacker-news {
   .project::after {
     width: 80%;
     height: 80%;
-    background: url("/src/images/POMELIA.png");
+    background: url("/src/images/hacker-news.png");
     background-position: center;
     background-size: auto;
     filter: grayscale(1);

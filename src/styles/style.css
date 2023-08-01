@@ -11986,15 +11986,15 @@ fieldset:disabled .btn {
   visibility: hidden;
 }
 
-#l1-pomelia .project::after {
+#l1-hacker-news .project::after {
   width: 80%;
   height: 80%;
-  background: url("/src/images/POMELIA.png");
+  background: url("/src/images/hacker-news.png");
   background-position: center;
   background-size: auto;
   filter: grayscale(1);
 }
-#l1-pomelia .project-overlay {
+#l1-hacker-news .project-overlay {
   width: 70%;
   height: 70%;
 }
