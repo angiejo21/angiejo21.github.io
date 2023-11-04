@@ -3,6 +3,7 @@ $secondary: #ffee32;
 $light: #fffdeb;
 $dark: #141000;
 $headings-font-family: "Raleway", sans-serif;
+$transition: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 // import bootstap
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -39,7 +40,7 @@ h1 {
   border-radius: 20px;
   font-family: $headings-font-family;
   text-transform: uppercase;
-  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.3s $transition;
 }
 .btn:hover {
   transform: scale(1.1);
@@ -58,7 +59,7 @@ h1 {
   aspect-ratio: 1;
   background-color: var(--bs-body-color);
   border-radius: 50%;
-  transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: 0.5s $transition;
   &:hover {
     transform: scale(1.1);
   }
@@ -70,7 +71,7 @@ h1 {
   background-color: var(--bs-body-bg);
   color: var(--bs-heading-color);
   border: none;
-  transition: color 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: color 0.5s $transition;
   &:hover {
     color: $primary;
   }
@@ -81,7 +82,7 @@ h1 {
   text-decoration: none;
   color: var(--bs-heading-color);
   letter-spacing: 0.2rem;
-  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.5s $transition;
   &:hover,
   &:visited:hover {
     color: $primary;

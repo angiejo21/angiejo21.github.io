@@ -1,4 +1,6 @@
-// import "../../node_modules/bootstrap/dist/js/bootstrap";
+import bootstrap from "bootstrap";
+import "../img/hacker-news.png";
+import "../scss/style.scss";
 
 //DARK MODE
 document.getElementById("darkMode").addEventListener("click", () => {

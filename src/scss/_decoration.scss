@@ -1,117 +1,112 @@
-#home .row{
+#home .row {
   position: relative;
 }
-//Yellow circles
-#home .row .col-12::before{
-  content: '';
+//Yellow circle
+#home .row .col-12::before {
+  content: "";
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) ;
+  transform: translate(-50%, -50%);
   width: 50em;
   height: 50em;
   border-radius: 50%;
   border: 6rem solid $primary;
   z-index: -1;
 }
-#portfolio .row::before{
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) ;
-  width: 50em;
-  height: 50em;
-  border-radius: 50%;
-  border: 6rem solid $secondary;
-  z-index: -1;
-}
 //Gradient circles
-section, footer{
+section,
+footer {
   position: relative;
 }
-#home::before, #home::after,
-#about-me::before, #about-me::after,
-#portfolio::before, #portfolio::after,
-#intro::before, #main::after,
-#skills::before, #other::after {
-  content: '';
+#home::before,
+#home::after,
+#about-me::before,
+#about-me::after,
+#portfolio::before,
+#portfolio::after,
+#intro::before,
+#main::after,
+#skills::before,
+#other::after {
+  content: "";
   aspect-ratio: 1;
   width: 300px;
   border-radius: 50%;
   z-index: -1;
   position: absolute;
-  background-image: linear-gradient(45deg, rgba($dark,0.30), rgba($light,0.30));
+  background-image: linear-gradient(45deg, rgba($dark, 0.3), rgba($light, 0.3));
 }
 
-#home::before{
+#home::before {
   left: -150px;
 }
 #home::after,
-#portfolio::after{
+#portfolio::after {
   right: -150px;
   bottom: -150px;
 }
-#about-me::after{
-  bottom: 0;
-  right: 300px;
+#about-me::after {
+  bottom: -100px;
+  right: 100px;
 }
 #portfolio::before,
-#other::after{
+#other::after {
   left: -150px;
 }
-#skills::before{
+#skills::before {
   right: -150px;
   top: -150px;
 }
-#main::after{
+#main::after {
   bottom: 0;
   left: -100px;
 }
-#intro::before{
+#intro::before {
   right: -150px;
   top: 0px;
 }
 //Dots
 #home .row::before,
 footer::before,
-#intro .row::before{
-  content: '::::::';
+#intro .row::before {
+  content: "::::::";
   font-size: 4rem;
   z-index: -1;
   position: absolute;
   color: $secondary;
 }
-#home .row::before{
+#home .row::before {
   bottom: 0;
   right: 100px;
 }
-footer::before{
+footer::before {
   top: -75px;
   right: 25px;
 }
-#intro .row::before{
-  top:-50px;
+#intro .row::before {
+  top: -50px;
   left: 50px;
 }
 
-:is(#home, #about-me, #portfolio) .row::after{
-  content: '::::::';
+:is(#home, #about-me, #portfolio) .row::after {
+  content: "::::::";
   font-size: 4rem;
   z-index: -1;
   position: absolute;
 }
-#about-me .row::after{
+#about-me .row::after {
   right: 0;
   bottom: 0;
 }
-#portfolio .row::after{
+#portfolio .row::after {
   left: 0;
   bottom: 0;
 }
 
 @media print {
-  * ::before, ::after{
+  * ::before,
+  ::after {
     display: none;
   }
 }
