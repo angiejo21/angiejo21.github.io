@@ -37,367 +37,38 @@
         <span class="visually-hidden">Loading...</span>
       </div>
     </div>
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="contactModal"
-      tabindex="-1"
-      aria-labelledby="contactModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5 text-uppercase" id="modal-title">
-              Contact-me
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form id="contact-form" class="">
-              <input type="hidden" name="contact_number" />
-              <div class="row mb-3 g-3">
-                <div class="col">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="First name"
-                    name="first_name"
-                    aria-label="First name"
-                  />
-                </div>
-                <div class="col">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Last name"
-                    name="last_name"
-                    aria-label="Last name"
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="name@example.com"
-                  name="email"
-                />
-              </div>
-              <div class="">
-                <textarea
-                  class="form-control"
-                  placeholder="Message"
-                  style="height: 100px"
-                  name="message"
-                ></textarea>
-              </div>
-              <div class="mt-3">
-                <button
-                  type="button"
-                  class="btn btn-secondary me-2"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="submit" class="btn btn-primary" value="Submit">
-                  Submit
-                </button>
-              </div>
-            </form>
-            <div id="success" class="text-center d-none">
-              <h1 class="colorful">Thank you!</h1>
-              <h5>I'll get back to you shortly 🏃‍♀️</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="page">
-      <header class="container-fluid">
-        <nav class="navbar fixed-top">
-          <div class="container-fluid d-flex justify-content-end m-4">
-            <button
-              class="navbar-toggler p-4"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-            >
-              <span class="toggler-icon fs-2">
-                <i class="fa-solid fa-bars"></i>
-              </span>
-            </button>
-            <div
-              class="offcanvas offcanvas-end"
-              tabindex="-1"
-              id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
-            >
-              <div class="offcanvas-header justify-content-end p-1 pt-4 pe-4">
-                <button
-                  type="button"
-                  class="btn-close fs-3"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <button
-                      type="button"
-                      class="fs-3 ps-0"
-                      aria-label="Toggle dark mode"
-                      id="darkMode"
-                    >
-                      <i class="fa-solid fa-circle-half-stroke"></i>
-                    </button>
-                  </li>
-                  <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-3" aria-current="page" href="#home"
-                      >Home:</a
-                    >
-                  </li>
-                  <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-3" href="#about-me">About-me:</a>
-                  </li>
-                  <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <a class="nav-link fs-3" href="#portfolio">Portfolio:</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fs-3" href="/src/resume.html">Resume:</a>
-                  </li>
-                </ul>
-                <hr />
-                <h5 class="colorful">Get in touch</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <button
-                      type="button"
-                      class="nav-link px-0"
-                      data-bs-toggle="modal"
-                      data-bs-target="#contactModal"
-                    >
-                      <i
-                        class="fa-regular fa-envelope fs-3 me-3"
-                        aria-label="Contact me"
-                      ></i
-                      >Contact-me
-                    </button>
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link px-0"
-                      href="https://github.com/angiejo21"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visit my Github profile"
-                      ><i class="fa-brands fa-github-alt fs-3 me-3"></i
-                      >Git-hub</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link px-0"
-                      href="https://www.linkedin.com/in/angelabello/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visit my LinkedIn profile"
-                      ><i class="fa-brands fa-linkedin-in fs-3 me-3"></i
-                      >LinkedIn</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link px-0 active"
-                      aria-current="page"
-                      href="https://www.instagram.com/angiejo21"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visit my Instagram profile"
-                      ><i class="fa-brands fa-instagram fs-3 me-3"></i
-                      >Instagram</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link px-0"
-                      href="https://talent.start2impact.it/profile/angela-bello"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visit my Start2impact profile"
-                      ><i class="fa-solid fa-rocket fs-3 me-3"></i
-                      >Start2impact</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
+      <header class="container d-flex justify-content-end align-items-center">
+        <div class="">
+          <button
+            type="button"
+            class="m-3"
+            aria-label="Toggle dark mode"
+            id="theme-toggle"
+          >
+            <svg>
+              <use xlink:href="#sun"></use>
+            </svg>
+          </button>
+        </div>
       </header>
       <main>
-        <!--------------------------Intro-------------------------->
-        <section class="container my-5 text-center" id="home">
+        <section
+          class="container d-flex justify-content-center align-items-center"
+          id="root"
+        >
           <div class="row py-5">
-            <div class="col-12 py-5">
+            <div class="col-12 py-5 text-center">
               <h1 class="text-uppercase fw-bolder mb-4 colorful">Hi!</h1>
               <h2 class="">I'm Angela Bellò</h2>
               <h2 class="text-muted">Web Developer</h2>
             </div>
           </div>
         </section>
-        <!------------------------Portfolio------------------------>
-        <section class="container my-5" id="portfolio">
-          <div class="row d-flex mb-5 justify-content-center">
-            <div class="col-12 text-end">
-              <h2 class="text-uppercase fw-bolder section-title mb-4">
-                Projects:
-              </h2>
-            </div>
-            <!--Project 1-->
-            <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-              <a href="https://hacker-news.bello.codes" target="_blank">
-                <figure class="project project--1 mb-3"></figure
-              ></a>
-              <h3 class="text-light">Hacker News</h3>
-              <p class="text-light">JavaScript - Hacker News API</p>
-            </div>
-            <!--Project 2-->
-            <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-              <a href="https://kicks.bello.codes" target="_blank">
-                <figure class="project project--2 mb-3"></figure>
-              </a>
-              <h3 class="text-light">Kicks Inc</h3>
-              <p class="text-light">Canva - Bootstrap 5 - Sass</p>
-            </div>
-            <!--Project 3-->
-            <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-              <a href="https://counter.bello.codes" target="_blank">
-                <figure class="project project--3 mb-3"></figure
-              ></a>
-              <h3 class="text-light">Retro-Counter</h3>
-              <p class="text-light">Vanilla JavaScript</p>
-            </div>
-            <div class="row d-flex my-5 justify-content-center">
-              <button class="btn btn-primary col-6 text-uppercase">More</button>
-            </div>
-          </div>
-        </section>
-        <!-------------------------About me------------------------->
-        <section class="container my-5" id="about-me">
-          <div class="row py-5">
-            <div class="col-12 text-end">
-              <h2 class="text-uppercase fw-bolder section-title mb-4">
-                About me:
-              </h2>
-            </div>
-
-            <div class="row">
-              <h4>I'm a <span class="colorful" id="carousel-words"></span></h4>
-              <p>
-                Hi there! I'm Angela, a Junior Full Stack Developer based in
-                Italy. With my background in languages and my love for
-                technology, I've found a perfect match in the world of coding.
-                I'm always on a mission to learn and grow, continuously
-                expanding my skills and knowledge to stay ahead of the game.
-              </p>
-              <div class="col-6 pt-3 d-flex justify-content-center">
-                <a
-                  class="btn btn-secondary col-6 shadow-lg me-2 me-md-4"
-                  href="mailto:info@bello.codes?subject=AB.Codes Contact Form"
-                  >Mail me</a
-                >
-                <a
-                  href="/src/resume.html"
-                  class="btn btn-primary col-6 shadow-lg"
-                  >Resume</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
-      <footer class="container my-5">
-        <div class="row d-flex justify-content-center">
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <button
-                type="button"
-                class="nav-link text-center m-2 p-3"
-                data-bs-toggle="modal"
-                data-bs-target="#contactModal"
-              >
-                <i
-                  class="fa-regular fa-envelope fs-3"
-                  aria-label="Contact me"
-                ></i>
-              </button>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center m-2 p-3"
-                href="https://github.com/angiejo21"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i
-                  class="fa-brands fa-github-alt fs-3"
-                  aria-label="Visit my Github profile"
-                ></i
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center m-2 p-3"
-                href="https://www.linkedin.com/in/angelabello/"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i
-                  class="fa-brands fa-linkedin-in fs-3"
-                  aria-label="Visit my LinkedIn profile"
-                ></i
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center m-2 p-3"
-                href="https://www.instagram.com/angiejo21"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i
-                  class="fa-brands fa-instagram fs-3"
-                  aria-label="Visit my Instagram profile"
-                ></i
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-center m-2 p-3"
-                href="https://talent.start2impact.it/profile/angela-bello"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><i
-                  class="fa-solid fa-rocket fs-3"
-                  aria-label="Visit my Start2impact profile"
-                ></i
-              ></a>
-            </li>
-          </ul>
-          <div class="col-12 m-3 d-flex justify-content-center">
-            <p class="text-muted">
-              Copyright © <span id="current-year" class="me-1"></span
-              ><span class="text-primary">Angela Bellò</span>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <footer
+        class="container d-flex justify-content-center align-items-center"
+      ></footer>
     </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script

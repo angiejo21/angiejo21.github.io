@@ -1,24 +1,42 @@
+$tertiary: #ffa600;
 $primary: #fdc500;
 $secondary: #ffee32;
 $light: #fffdeb;
 $dark: #141000;
-$headings-font-family: "Raleway", sans-serif;
+// $headings-font-family: "Raleway", sans-serif;
 $transition: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 // import bootstap
 @import "../../node_modules/bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap");
 @import "portfolio";
 @import "decoration";
 
 :root {
-  --bs-body-font-family: "Merriweather", serif;
+  --bs-body-font-family: "Raleway", sans-serif;
+
+  [data-bs-theme="dark"] {
+  }
+  [data-bs-theme="light"] {
+  }
+}
+html {
+}
+section {
+  min-height: 80vh;
+}
+footer,
+header {
+  height: 10vh;
+}
+svg {
+  max-height: 2rem;
+  max-width: 2rem;
+  fill: currentColor;
 }
 .page {
   overflow: hidden;
-}
-.page main {
-  margin-top: 6rem;
+  min-height: 100vh;
 }
 button {
   border: none;
@@ -29,9 +47,16 @@ button:active,
 button:visited {
   color: var(--bs-heading-color);
 }
-#home h1 {
-  font-size: 10rem;
-  letter-spacing: 0.5rem;
+#intro {
+  cursor: pointer;
+  h1 {
+    font-size: 10rem;
+    letter-spacing: 0.5rem;
+    transition: 0.5s all;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 h1 {
   letter-spacing: 0.1 rem;
@@ -43,32 +68,26 @@ h1 {
   transition: all 0.3s $transition;
 }
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
+}
+.say-hi {
+  animation: sayHi 5s linear 3s 5;
 }
 .colorful {
-  background-image: linear-gradient(to top, $primary, $secondary);
+  background-image: linear-gradient(0deg, $tertiary, $primary, $secondary);
+  animation: sunshine 1s linear 0s infinite;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
+
 .section-title {
   letter-spacing: 0.5rem;
   text-shadow: 1px 1px 5px rgba($dark, 0.25);
 }
-.navbar-toggler {
-  aspect-ratio: 1;
-  background-color: var(--bs-body-color);
-  border-radius: 50%;
-  transition: 0.5s $transition;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-.toggler-icon {
-  color: var(--bs-body-bg);
-}
-#darkMode {
-  background-color: var(--bs-body-bg);
+
+#theme-toggle {
+  background-color: transparent;
   color: var(--bs-heading-color);
   border: none;
   transition: color 0.5s $transition;
@@ -116,6 +135,7 @@ h1 {
   transition: opacity 0.3s;
   display: flex;
 }
+
 @media print {
   #main img,
   #other img {
@@ -142,5 +162,56 @@ h1 {
     left: 0;
     z-index: 1;
     border-bottom: 2rem solid $primary;
+  }
+}
+
+@keyframes sunshine {
+  0% {
+    background-image: linear-gradient(0deg, $tertiary, $primary, $secondary);
+  }
+  12% {
+    background-image: linear-gradient(45deg, $tertiary, $primary, $secondary);
+  }
+  25% {
+    background-image: linear-gradient(90deg, $tertiary, $primary, $secondary);
+  }
+  37% {
+    background-image: linear-gradient(135deg, $tertiary, $primary, $secondary);
+  }
+  50% {
+    background-image: linear-gradient(180deg, $tertiary, $primary, $secondary);
+  }
+  62% {
+    background-image: linear-gradient(225deg, $tertiary, $primary, $secondary);
+  }
+  75% {
+    background-image: linear-gradient(270deg, $tertiary, $primary, $secondary);
+  }
+  87% {
+    background-image: linear-gradient(315deg, $tertiary, $primary, $secondary);
+  }
+  100% {
+    background-image: linear-gradient(360deg, $tertiary, $primary, $secondary);
+  }
+}
+
+@keyframes sayHi {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(5deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

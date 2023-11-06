@@ -1,21 +1,21 @@
-#home .row {
+#intro {
   position: relative;
 }
 //Yellow circle
-#home .row .col-12::before {
+#intro .col-12::before {
   content: "";
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 50em;
-  height: 50em;
+  width: 50rem;
+  height: 50rem;
   border-radius: 50%;
   border: 6rem solid $primary;
   z-index: -1;
 }
 //Gradient circles
-section,
+/*section,
 footer {
   position: relative;
 }
@@ -110,3 +110,4 @@ footer::before {
     display: none;
   }
 }
+*/
