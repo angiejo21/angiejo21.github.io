@@ -14,13 +14,11 @@ $transition: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 :root {
   --bs-body-font-family: "Raleway", sans-serif;
-
-  [data-bs-theme="dark"] {
-  }
-  [data-bs-theme="light"] {
-  }
 }
-html {
+//Generic
+.page {
+  overflow: hidden;
+  min-height: 100vh;
 }
 section {
   min-height: 80vh;
@@ -34,20 +32,19 @@ svg {
   max-width: 2rem;
   fill: currentColor;
 }
-.page {
-  overflow: hidden;
-  min-height: 100vh;
-}
-button {
+button,
+button:visited {
   border: none;
   background-color: transparent;
+  color: var(--bs-heading-color);
+  transition: 0.5s;
 }
 button:hover,
-button:active,
-button:visited {
-  color: var(--bs-heading-color);
+button:active {
+  color: $primary;
 }
-#intro {
+
+div#intro {
   cursor: pointer;
   h1 {
     font-size: 10rem;
@@ -57,9 +54,9 @@ button:visited {
       transform: scale(1.1);
     }
   }
-}
-h1 {
-  letter-spacing: 0.1 rem;
+  h1 {
+    letter-spacing: 0.1rem;
+  }
 }
 .btn {
   border-radius: 20px;
@@ -83,7 +80,6 @@ h1 {
 
 .section-title {
   letter-spacing: 0.5rem;
-  text-shadow: 1px 1px 5px rgba($dark, 0.25);
 }
 
 #theme-toggle {

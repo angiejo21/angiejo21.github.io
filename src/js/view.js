@@ -1,12 +1,10 @@
 export default class View {
   _parentElement = document.getElementById("root");
-  target;
-  addHandlerClick() {
-    this._parentElement.addEventListener();
-  }
+  addHandler() {}
 
   init() {
     this._parentElement.innerHTML = this._markup;
+    this.addHandler();
   }
   _clear() {
     this._parentElement.innerHTML = "";

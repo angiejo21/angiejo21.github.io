@@ -10,30 +10,48 @@ class HomeView extends View {
     </div>
     <div class="row">
     <h4>I'm a <span class="colorful" id="carousel-words"></span></h4>
-    <p>
-      I'm Angela, a Junior Full Stack Developer based in
-      Italy. With my background in languages and my love for
-      technology, I've found a perfect match in the world of coding.
-      I'm always on a mission to learn and grow, continuously
-      expanding my skills and knowledge to stay ahead of the game.
-    </p>
-    <div class="col-12 pt-3 d-flex justify-content-center gap-3">
+
+    <div class="row pt-3 d-flex flex-wrap justify-content-center gap-3">
       <a
-        class="btn btn-tertiary col-3 shadow-lg" id="projects"
+        class="btn btn-info col-md-3 shadow-lg" id="projects"
         >Projects</a
       >
       <a
-      class="btn btn-primary col-3 shadow-lg" id="bio"
+      class="btn btn-primary col-md-3 shadow-lg" id="bio"
       >Bio</a
       >
       <a
-        class="btn btn-secondary col-3 shadow-lg" id="contact"
+        class="btn btn-secondary col-md-3 shadow-lg" id="contact"
         >Contact me</a
       >
     </div>
   </div>
 </div>
 `;
+  words = [
+    "dreamer",
+    "problem solver",
+    "art enthusiast",
+    "team leader",
+    "team player",
+    "nerd",
+    "traveller",
+    "curious learner",
+    "culture lover",
+    "language addicted",
+  ];
+  addHandler() {
+    let counter = 0;
+    const wordElement = document.getElementById("carousel-words");
+    setInterval(() => {
+      if (counter >= this.words.length) {
+        counter = 0;
+      } else {
+        wordElement.innerHTML = this.words[counter];
+        counter++;
+      }
+    }, 1500);
+  }
 }
 
 export default new HomeView();

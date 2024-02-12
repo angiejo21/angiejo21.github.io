@@ -4,7 +4,7 @@ class ContactView extends View {
   _markup = `
   <div class="row py-5" id='home'>
     <div class="col-12 text-end">
-      <button id="intro">← Back</button>
+      <button id="intro" class="mb-3">← Back</button>
       <h2 class="text-uppercase fw-bolder section-title mb-4 colorful">
         Contacts:
       </h2>
@@ -97,36 +97,12 @@ class ContactView extends View {
       </div>
     </form>
     <div id="success" class="text-center d-none">
-      <h3 class="colorful">Thank you!</h3>
+      <h3 class="colorful fw-bolder text-uppercase">Thank you!</h3>
       <h5>I'll get back to you shortly 🏃‍♀️</h5>
     </div>
     </div>
   </div>
 `;
-  addHandlerSubmit() {
-    const success = document.getElementById("success");
-    const form = document.getElementById("contact_form");
-
-    document
-      .getElementById("contact-form")
-      .addEventListener("submit", function (event) {
-        event.preventDefault();
-        console.log("submit!!");
-        // generate a five digit number for the contact_number variable
-        this.contact_number.value = (Math.random() * 100000) | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm("contact_service", "contact_form", this).then(
-          function () {
-            console.log("SUCCESS!");
-            form.classList.add("d-none");
-            success.classList.remove("d-none");
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
-      });
-  }
 }
 
 export default new ContactView();

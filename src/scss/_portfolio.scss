@@ -1,8 +1,8 @@
 .project {
   aspect-ratio: 1 /1;
-  border: 1px solid white;
   filter: grayscale(1);
   background-size: cover;
+  transition: 0.5s;
   &--1 {
     background-image: url(../img/hacker-news.png);
   }
@@ -11,5 +11,16 @@
   }
   &--3 {
     background-image: url(../img/counter.png);
+  }
+  &--4 {
+    background-image: url(../img/nxt.png);
+  }
+  &--5 {
+    background-image: url(../img/checked.png);
+    background-position: center;
+  }
+  &:hover,
+  &:active {
+    filter: none;
   }
 }

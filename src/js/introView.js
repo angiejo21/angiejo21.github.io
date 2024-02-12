@@ -1,4 +1,8 @@
 import View from "./view.js";
+import homeView from "./homeView.js";
+import projectsView from "./projectsView.js";
+import contactView from "./contactView.js";
+import bioView from "./bioView.js";
 
 class IntroView extends View {
   _markup = `
@@ -10,6 +14,33 @@ class IntroView extends View {
     </div>
   </div>
 `;
+  addHandler() {
+    this._parentElement.addEventListener("click", (e) => {
+      if (!e.target.closest(".submit")) e.preventDefault();
+      if (e.target.closest("#intro")) homeView.init();
+      if (e.target.closest("#projects")) projectsView.init();
+      if (e.target.closest("#bio")) bioView.init();
+      if (e.target.closest("#contact")) contactView.init();
+    });
+
+    this._parentElement.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const contactForm = document.getElementById("contact-form");
+      const success = document.getElementById("success");
+      // generate a five digit number for the contact_number variable
+      contactForm.contact_number.value = (Math.random() * 100000) | 0;
+      // these IDs from the previous steps
+      emailjs.sendForm("contact_service", "contact_form", contactForm).then(
+        function () {
+          document.querySelector(".contact_form").classList.add("d-none");
+          document.getElementById("success").classList.remove("d-none");
+        },
+        function (error) {
+          console.log("FAILED...", error);
+        }
+      );
+    });
+  }
 }
 
 export default new IntroView();
