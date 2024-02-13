@@ -5,47 +5,43 @@ class ContactView extends View {
   <div class="row py-5" id='home'>
     <div class="col-12 text-end">
       <button id="intro" class="mb-3">← Back</button>
-      <h2 class="text-uppercase fw-bolder section-title mb-4 colorful">
+      <h2 class="text-uppercase fw-bolder section-title mb-5 colorful">
         Contacts:
       </h2>
     </div>
     <div class="row">
       <div class="col-12">
-        <ul class="">
+        <ul class="d-flex gap-5 justify-content-center list-unstyled">
           <li class="">
-            <a class="">
-              <button>
-                <svg>
+            <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link"  href="https://github.com/angiejo21" target="_blank">              
+                <svg class="mb-1">
                 <use xlink:href="#github"></use>
-                </svg>
-              </button>
+                </svg>              
+              Github
             </a>
           </li>
           <li>
-            <a>
-              <button>
-                <svg>
+            <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link" href="https://www.linkedin.com/in/angelabello/" target="_blank">              
+                <svg class="mb-1">
                 <use xlink:href="#linkedin"></use>
-                </svg>
-              </button>
+                </svg>                
+                Linkedin
             </a>
           </li>
           <li>
-            <a>
-              <button>
-                <svg>
+            <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link" href="https://www.instagram.com/angiejo21" target="_blank">              
+                <svg class="mb-1">
                 <use xlink:href="#instagram"></use>
-                </svg>
-              </button>
+                </svg>              
+              Instagram
             </a>
           </li>
           <li>
-            <a>
-              <button>
-                <svg>
+            <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link" href="https://talent.start2impact.it/profile/angela-bello" target="_blank">               
+                <svg class="mb-1">
                 <use xlink:href="#navigation"></use>
-                </svg>
-              </button>
+                </svg>              
+              start2impact
             </a>
           </li>
         </ul>

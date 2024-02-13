@@ -2,16 +2,16 @@ import View from "./view.js";
 
 class HomeView extends View {
   _markup = `
-  <div class="row py-5" id='home'>
+  <div class="row py-5  d-flex justify-content-center" id='home'>
     <div class="col-12 text-end">
-      <h2 class="text-uppercase fw-bolder section-title mb-4 colorful">
+      <h2 class="text-uppercase fw-bolder section-title mb-5 colorful">
         Hi there!
       </h2>
     </div>
-    <div class="row">
-    <h4>I'm a <span class="colorful" id="carousel-words"></span></h4>
+    <div class="row col-12 d-flex justify-content-center">
+    <h4 class='text-center'>What are you looking for?</h4>
 
-    <div class="row pt-3 d-flex flex-wrap justify-content-center gap-3">
+    <div class="row col-12 pt-3 d-flex flex-wrap justify-content-center gap-3">
       <a
         class="btn btn-info col-md-3 shadow-lg" id="projects"
         >Projects</a
@@ -28,30 +28,30 @@ class HomeView extends View {
   </div>
 </div>
 `;
-  words = [
-    "dreamer",
-    "problem solver",
-    "art enthusiast",
-    "team leader",
-    "team player",
-    "nerd",
-    "traveller",
-    "curious learner",
-    "culture lover",
-    "language addicted",
-  ];
-  addHandler() {
-    let counter = 0;
-    const wordElement = document.getElementById("carousel-words");
-    setInterval(() => {
-      if (counter >= this.words.length) {
-        counter = 0;
-      } else {
-        wordElement.innerHTML = this.words[counter];
-        counter++;
-      }
-    }, 1500);
-  }
+  // words = [
+  //   "dreamer",
+  //   "problem solver",
+  //   "art enthusiast",
+  //   "team leader",
+  //   "team player",
+  //   "nerd",
+  //   "traveller",
+  //   "curious learner",
+  //   "culture lover",
+  //   "language addicted",
+  // ];
+  // addHandler() {
+  //   let counter = 0;
+  //   const wordElement = document.getElementById("carousel-words");
+  //   setInterval(() => {
+  //     if (counter >= this.words.length) {
+  //       counter = 0;
+  //     } else {
+  //       wordElement.innerHTML = this.words[counter];
+  //       counter++;
+  //     }
+  //   }, 1500);
+  // }
 }
 
 export default new HomeView();

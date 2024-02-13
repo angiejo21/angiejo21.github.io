@@ -5,7 +5,7 @@ class HeaderView extends View {
   _markup = `
   <button
     type="button"
-    class="my-3"
+    class="my-5"
     aria-label="Toggle dark mode"
     id="theme-toggle"
   >
