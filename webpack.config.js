@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "[name][contenthash].js",
     clean: true,
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: "assets/[name][ext]",
   },
   devtool: "source-map",
   devServer: {
@@ -27,6 +27,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/[name][ext]",
+        },
+      },
+      {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
@@ -39,10 +46,6 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
       },
       {
         test: /\.svg$/i,
