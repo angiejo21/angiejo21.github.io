@@ -28,30 +28,6 @@ class HomeView extends View {
   </div>
 </div>
 `;
-  // words = [
-  //   "dreamer",
-  //   "problem solver",
-  //   "art enthusiast",
-  //   "team leader",
-  //   "team player",
-  //   "nerd",
-  //   "traveller",
-  //   "curious learner",
-  //   "culture lover",
-  //   "language addicted",
-  // ];
-  // addHandler() {
-  //   let counter = 0;
-  //   const wordElement = document.getElementById("carousel-words");
-  //   setInterval(() => {
-  //     if (counter >= this.words.length) {
-  //       counter = 0;
-  //     } else {
-  //       wordElement.innerHTML = this.words[counter];
-  //       counter++;
-  //     }
-  //   }, 1500);
-  // }
 }
 
 export default new HomeView();

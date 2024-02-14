@@ -21,6 +21,14 @@ class IntroView extends View {
       if (e.target.closest("#projects")) projectsView.init();
       if (e.target.closest("#bio")) bioView.init();
       if (e.target.closest("#contact")) contactView.init();
+      if (e.target.closest(".project")) {
+        const project = e.target.closest("a");
+        window.open(project.href, "blank");
+      }
+      if (e.target.closest(".nav-link")) {
+        const link = e.target.closest(".nav-link");
+        window.open(link.href, "blank");
+      }
     });
 
     this._parentElement.addEventListener("submit", function (e) {

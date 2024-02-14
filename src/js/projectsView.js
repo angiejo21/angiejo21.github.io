@@ -1,8 +1,45 @@
 import View from "./view.js";
 
 class ProjectsView extends View {
+  projects = [
+    {
+      id: 4,
+      name: "Checked",
+      href: "https://checked.bello.codes/",
+      class: "project--4",
+      language: "Javascript - React",
+    },
+    {
+      id: 3,
+      name: "NXT",
+      href: "https://nxt.bello.codes/",
+      class: "project--3",
+      language: "Vanilla JS - Open Library API",
+    },
+    {
+      id: 2,
+      name: "Hacker News",
+      href: "https://hacker-news.bello.codes",
+      class: "project--2",
+      language: "Vanilla JS - Hacker News API",
+    },
+    {
+      id: 1,
+      name: "Retro-Counter",
+      href: "https://counter.bello.codes",
+      class: "project--1",
+      language: "Vanilla Javascript",
+    },
+    {
+      id: 0,
+      name: "Kicks Inc",
+      href: "https://kicks.bello.codes",
+      class: "project--0",
+      language: "Canva - Bootstrap 5 - Sass",
+    },
+  ];
   _markup = `
-  <div class="row d-flex justify-content-center">
+  <div class="row py-5 d-flex justify-content-center">
     <div class="col-12 text-end">
       <button id="intro" class="mb-3">← Back</button>
       <h2 class="text-uppercase fw-bolder section-title mb-5 colorful">
@@ -10,47 +47,20 @@ class ProjectsView extends View {
       </h2>
     </div>
     <!--Project-->
-    <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-      <a href="https://https://checked.bello.codes/" target="_blank">
-        <figure class="project project--5 mb-3"></figure
-      ></a>
-      <h3>Checked</h3>
-      <p>React</p>
-    </div>
-    <!--Project-->
-    <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-      <a href="https://https://nxt.bello.codes/" target="_blank">
-        <figure class="project project--4 mb-3"></figure
-      ></a>
-      <h3>NXT</h3>
-      <p>JavaScript - Open Library API</p>
-    </div>
-    <!--Project-->
-    <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-      <a href="https://hacker-news.bello.codes" target="_blank">
-        <figure class="project project--1 mb-3"></figure
-      ></a>
-      <h3>Hacker News</h3>
-      <p>JavaScript - Hacker News API</p>
-    </div>
-    <!--Project-->
-    <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-      <a href="https://kicks.bello.codes" target="_blank">
-        <figure class="project project--2 mb-3"></figure>
-      </a>
-      <h3>Kicks Inc</h3>
-      <p>Canva - Bootstrap 5 - Sass</p>
-    </div>
-    <!--Project-->
-    <div class="col-lg-4 col-md-6 col-12 text-center text-center">
-      <a href="https://counter.bello.codes" target="_blank">
-        <figure class="project project--3 mb-3"></figure
-      ></a>
-      <h3>Retro-Counter</h3>
-      <p>Vanilla JavaScript</p>
-    </div>
-
-</div>
+    ${this.projects
+      .map((p) => {
+        return `
+      <div class="col-lg-4 col-md-6 col-12 text-center text-center">
+        <a href=${p.href}>
+          <figure class="mb-3 project ${p.class}"></figure>
+        </a>
+        <h3>${p.name}</h3>
+        <p>${p.language}</p>
+      </div>
+      `;
+      })
+      .join("")}
+  </div>
   `;
 }
 

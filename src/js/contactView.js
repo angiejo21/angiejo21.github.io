@@ -2,17 +2,16 @@ import View from "./view.js";
 
 class ContactView extends View {
   _markup = `
-  <div class="row py-5" id='home'>
+  <div class="row py-5 d-flex justify-content-center" id='home'>
     <div class="col-12 text-end">
       <button id="intro" class="mb-3">← Back</button>
       <h2 class="text-uppercase fw-bolder section-title mb-5 colorful">
         Contacts:
       </h2>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <ul class="d-flex gap-5 justify-content-center list-unstyled">
-          <li class="">
+    <div class="row d-flex justify-content-center">      
+        <ul class="row d-flex flex-wrap list-unstyled">
+          <li class="col-6 col-md-3">
             <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link"  href="https://github.com/angiejo21" target="_blank">              
                 <svg class="mb-1">
                 <use xlink:href="#github"></use>
@@ -20,7 +19,7 @@ class ContactView extends View {
               Github
             </a>
           </li>
-          <li>
+          <li class="col-6 col-md-3">
             <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link" href="https://www.linkedin.com/in/angelabello/" target="_blank">              
                 <svg class="mb-1">
                 <use xlink:href="#linkedin"></use>
@@ -28,7 +27,7 @@ class ContactView extends View {
                 Linkedin
             </a>
           </li>
-          <li>
+          <li class="col-6 col-md-3">
             <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link" href="https://www.instagram.com/angiejo21" target="_blank">              
                 <svg class="mb-1">
                 <use xlink:href="#instagram"></use>
@@ -36,7 +35,7 @@ class ContactView extends View {
               Instagram
             </a>
           </li>
-          <li>
+          <li class="col-6 col-md-3">
             <a class="d-flex flex-column text-decoration-none justify-content-center align-items-center nav-link" href="https://talent.start2impact.it/profile/angela-bello" target="_blank">               
                 <svg class="mb-1">
                 <use xlink:href="#navigation"></use>
@@ -45,7 +44,7 @@ class ContactView extends View {
             </a>
           </li>
         </ul>
-      </div>
+      
     </div>
     <div class="row">
     <form id="contact-form" class="contact_form">
