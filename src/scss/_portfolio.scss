@@ -4,7 +4,7 @@
   background-size: cover;
   transition: 0.5s;
   &--0 {
-    background-image: url(../img/kicks-img-s-21.png);
+    background-image: url(../img/kicks.png);
   }
   &--1 {
     background-image: url(../img/counter.png);
@@ -17,6 +17,10 @@
   }
   &--4 {
     background-image: url(../img/checked.png);
+    background-position: center;
+  }
+  &--5 {
+    background-image: url(../img/flow.png);
     background-position: center;
   }
   &:hover,

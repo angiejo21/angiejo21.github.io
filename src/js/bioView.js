@@ -17,7 +17,7 @@ class BioView extends View {
       expanding my skills and knowledge to stay ahead of the game.
     </p>
     <div class="row d-flex my-5 justify-content-center">
-      <button class="btn btn-primary col-6 text-uppercase" disabled>Resume</button>
+      <button id="download" class="btn btn-primary col-6 text-uppercase">See resume</button>
     </div>
   </div>
 `;

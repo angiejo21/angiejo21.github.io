@@ -3,6 +3,13 @@ import View from "./view.js";
 class ProjectsView extends View {
   projects = [
     {
+      id: 5,
+      name: "Flow",
+      href: "https://flow.bello.codes/",
+      class: "project--5",
+      language: "Redux - React Router - Tailwindcss",
+    },
+    {
       id: 4,
       name: "Checked",
       href: "https://checked.bello.codes/",

@@ -57,6 +57,7 @@ class ContactView extends View {
             placeholder="First name"
             name="first_name"
             aria-label="First name"
+            id='firstName'
           />
         </div>
         <div class="col">
@@ -66,6 +67,7 @@ class ContactView extends View {
             placeholder="Last name"
             name="last_name"
             aria-label="Last name"
+            id='lastName'
           />
         </div>
       </div>
@@ -75,6 +77,7 @@ class ContactView extends View {
           class="form-control"
           placeholder="name@example.com"
           name="email"
+          id='email'
         />
       </div>
       <div class="">
@@ -83,6 +86,7 @@ class ContactView extends View {
           placeholder="Message"
           style="height: 100px"
           name="message"
+          id='message'
         ></textarea>
       </div>
       <div class="mt-3">
@@ -91,7 +95,7 @@ class ContactView extends View {
         </button>
       </div>
     </form>
-    <div id="success" class="text-center d-none">
+    <div id="success" class="text-center d-none mt-5">
       <h3 class="colorful fw-bolder text-uppercase">Thank you!</h3>
       <h5>I'll get back to you shortly 🏃‍♀️</h5>
     </div>
