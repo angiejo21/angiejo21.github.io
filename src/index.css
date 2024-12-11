@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* amber theme */
+    --background: hsl(20, 14.3%, 4.1%);
+    --foreground: hsl(60, 9.1%, 97.8%);
+    --primary: hsl(37.69999999999999, 92.1%, 50.2%);
+    --primary-foreground: hsl(20.899999999999977, 91.7%, 14.1%);
+    --primary-hover: hsl(32.10000000000002, 94.6%, 43.7%);
+    --secondary: hsl(45.89999999999998, 96.7%, 64.5%);
+    --secondary-foreground: hsl(20.899999999999977, 91.7%, 14.1%);
+    --secondary-hover: hsl(43.30000000000001, 96.4%, 56.3%);
+    --muted: hsl(60 4.8% 95.9%);
+    --muted-foreground: hsl(25 5.3% 44.7%);
+    --accent: hsl(270.70000000000005, 91%, 65.1%);
+    --accent-foreground: hsl(273.5, 86.9%, 21%);
+    --accent-hover: hsl(271.5, 81.3%, 55.9%);
+  }
+  * {
+    @apply transition-all duration-500 ease-in-out;
+  }
+}
+/* neutral-indigo */
+.theme-white {
+  --background: hsl(0, 0%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --primary: hsl(0, 0%, 45.1%);
+  --primary-foreground: hsl(0, 0%, 3.9%);
+  --primary-hover: hsl(0, 0%, 32.2%);
+  --secondary: hsl(0, 0%, 83.1%);
+  --secondary-foreground: hsl(0, 0%, 3.9%);
+  --secondary-hover: hsl(0, 0%, 63.9%);
+  --accent: hsl(238.70000000000005, 83.5%, 66.7%);
+  --accent-foreground: hsl(243.79999999999995, 47.1%, 20%);
+  --accent-hover: hsl(243.39999999999998, 75.4%, 58.6%);
+}
+/* stone-red-sky */
+.theme-red {
+  --primary: hsl(0, 84.2%, 60.2%);
+  --primary-foreground: hsl(0, 74.7%, 15.5%);
+  --primary-hover: hsl(0, 72.2%, 50.6%);
+  --secondary: hsl(0, 93.5%, 81.8%);
+  --secondary-foreground: hsl(0, 74.7%, 15.5%);
+  --secondary-hover: hsl(0, 90.6%, 70.8%);
+  --accent: hsl(198.60000000000002, 88.7%, 48.4%);
+  --accent-foreground: hsl(204, 80.2%, 15.9%);
+  --accent-hover: hsl(200.39999999999998, 98%, 39.4%);
+}
+/* stone-orange-green */
+.theme-orange {
+  --primary: hsl(24.600000000000023, 95%, 53.1%);
+  --primary-foreground: hsl(13, 81.1%, 14.5%);
+  --primary-hover: hsl(20.5, 90.2%, 48.2%);
+  --secondary: hsl(30.69999999999999, 97.2%, 72.4%);
+  --secondary-foreground: hsl(13, 81.1%, 14.5%);
+  --secondary-hover: hsl(27, 96%, 61%);
+  --accent: hsl(142.10000000000002, 70.6%, 45.3%);
+  --accent-foreground: hsl(144.89999999999998, 80.4%, 10%);
+  --accent-hover: hsl(142.10000000000002, 76.2%, 36.3%);
+}
+/* stone-amber-purple */
+.theme-amber {
+  --primary: hsl(37.69999999999999, 92.1%, 50.2%);
+  --primary-foreground: hsl(20.899999999999977, 91.7%, 14.1%);
+  --primary-hover: hsl(32.10000000000002, 94.6%, 43.7%);
+  --secondary: hsl(45.89999999999998, 96.7%, 64.5%);
+  --secondary-foreground: hsl(20.899999999999977, 91.7%, 14.1%);
+  --secondary-hover: hsl(43.30000000000001, 96.4%, 56.3%);
+  --accent: hsl(270.70000000000005, 91%, 65.1%);
+  --accent-foreground: hsl(273.5, 86.9%, 21%);
+  --accent-hover: hsl(271.5, 81.3%, 55.9%);
+}
+/* stone-yellow-rose */
+.theme-yellow {
+  --primary: hsl(45.39999999999998, 93.4%, 47.5%);
+  --primary-foreground: hsl(26, 83.3%, 14.1%);
+  --primary-hover: hsl(40.60000000000002, 96.1%, 40.4%);
+  --secondary: hsl(50.39999999999998, 97.8%, 63.5%);
+  --secondary-foreground: hsl(26, 83.3%, 14.1%);
+  --secondary-hover: hsl(47.89999999999998, 95.8%, 53.1%);
+  --accent: hsl(349.70000000000005, 89.2%, 60.2%);
+  --accent-foreground: hsl(343.1, 87.7%, 15.9%);
+  --accent-hover: hsl(346.79999999999995, 77.2%, 49.8%);
+}
+/* slate-lime-fuchsia */
+.theme-lime {
+  --background: hsl(228.60000000000002, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --primary: hsl(83.69999999999999, 80.5%, 44.3%);
+  --primary-foreground: hsl(89.30000000000001, 80.4%, 10%);
+  --primary-hover: hsl(84.80000000000001, 85.2%, 34.5%);
+  --secondary: hsl(82, 84.5%, 67.1%);
+  --secondary-foreground: hsl(89.30000000000001, 80.4%, 10%);
+  --secondary-hover: hsl(82.69999999999999, 78%, 55.5%);
+  --accent: hsl(292.20000000000005, 84.1%, 60.6%);
+  --accent-foreground: hsl(296.79999999999995, 90.2%, 16.1%);
+  --accent-hover: hsl(293.4, 69.5%, 48.8%);
+}
+/* slate-emerald-red */
+.theme-emerald {
+  --background: hsl(228.60000000000002, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --primary: hsl(160.10000000000002, 84.1%, 39.4%);
+  --primary-foreground: hsl(165.70000000000005, 91.3%, 9%);
+  --primary-hover: hsl(161.39999999999998, 93.5%, 30.4%);
+  --secondary: hsl(156.20000000000005, 71.6%, 66.9%);
+  --secondary-foreground: hsl(165.70000000000005, 91.3%, 9%);
+  --secondary-hover: hsl(158.10000000000002, 64.4%, 51.6%);
+  --accent: hsl(0, 84.2%, 60.2%);
+  --accent-foreground: hsl(0, 74.7%, 15.5%);
+  --accent-hover: hsl(0, 72.2%, 50.6%);
+}
+/* slate-cyan-amber */
+.theme-cyan {
+  --background: hsl(228.60000000000002, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --primary: hsl(188.70000000000005, 94.5%, 42.7%);
+  --primary-foreground: hsl(197, 78.9%, 14.9%);
+  --primary-hover: hsl(191.60000000000002, 91.4%, 36.5%);
+  --secondary: hsl(187, 92.4%, 69%);
+  --secondary-foreground: hsl(197, 78.9%, 14.9%);
+  --secondary-hover: hsl(187.89999999999998, 85.7%, 53.3%);
+  --accent: hsl(37.69999999999999, 92.1%, 50.2%);
+  --accent-foreground: hsl(20.899999999999977, 91.7%, 14.1%);
+  --accent-hover: hsl(32.10000000000002, 94.6%, 43.7%);
+}
+/* slate-blue-pink */
+.theme-blue {
+  --background: hsl(228.60000000000002, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217.20000000000005, 91.2%, 59.8%);
+  --primary-foreground: hsl(226.20000000000005, 57%, 21%);
+  --primary-hover: hsl(221.20000000000005, 83.2%, 53.3%);
+  --secondary: hsl(211.70000000000005, 96.4%, 78.4%);
+  --secondary-foreground: hsl(226.20000000000005, 57%, 21%);
+  --secondary-hover: hsl(213.10000000000002, 93.9%, 67.8%);
+  --accent: hsl(330.4, 81.2%, 60.4%);
+  --accent-foreground: hsl(336.20000000000005, 83.9%, 17.1%);
+  --accent-hover: hsl(333.29999999999995, 71.4%, 50.6%);
+}
+/* slate-purple-emerald */
+.theme-purple {
+  --background: hsl(228.60000000000002, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --primary: hsl(270.70000000000005, 91%, 65.1%);
+  --primary-foreground: hsl(273.5, 86.9%, 21%);
+  --primary-hover: hsl(271.5, 81.3%, 55.9%);
+  --secondary: hsl(252.5, 94.7%, 85.1%);
+  --secondary-foreground: hsl(273.5, 86.9%, 21%);
+  --secondary-hover: hsl(255.10000000000002, 91.7%, 76.3%);
+  --accent: hsl(160.10000000000002, 84.1%, 39.4%);
+  --accent-foreground: hsl(165.70000000000005, 91.3%, 9%);
+  --accent-hover: hsl(161.39999999999998, 93.5%, 30.4%);
+}
+/* slate-fuchsia-orange */
+.theme-fuchsia {
+  --background: hsl(228.60000000000002, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --primary: hsl(292.20000000000005, 84.1%, 60.6%);
+  --primary-foreground: hsl(296.79999999999995, 90.2%, 16.1%);
+  --primary-hover: hsl(293.4, 69.5%, 48.8%);
+  --secondary: hsl(291.1, 93.1%, 82.9%);
+  --secondary-foreground: hsl(296.79999999999995, 90.2%, 16.1%);
+  --secondary-hover: hsl(292, 91.4%, 72.5%);
+  --accent: hsl(24.600000000000023, 95%, 53.1%);
+  --accent-foreground: hsl(13, 81.1%, 14.5%);
+  --accent-hover: hsl(20.5, 90.2%, 48.2%);
+}
+/* slate-pink-teal */
+.theme-pink {
+  --background: hsl(228.60000000000002, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --primary: hsl(330.4, 81.2%, 60.4%);
+  --primary-foreground: hsl(336.20000000000005, 83.9%, 17.1%);
+  --primary-hover: hsl(333.29999999999995, 71.4%, 50.6%);
+  --secondary: hsl(327.4, 87.1%, 81.8%);
+  --secondary-foreground: hsl(336.20000000000005, 83.9%, 17.1%);
+  --secondary-hover: hsl(328.6, 85.5%, 70.2%);
+  --accent: hsl(173.39999999999998, 80.4%, 40%);
+  --accent-foreground: hsl(178.60000000000002, 84.3%, 10%);
+  --accent-hover: hsl(174.70000000000005, 83.9%, 31.6%);
+}
