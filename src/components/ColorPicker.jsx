@@ -1,28 +1,32 @@
 import { CircleX } from "lucide-react";
-import Button from "./Button";
 import { useTheme } from "../context/themeContext";
+import Button from "./Button";
+import Colors from "./Colors";
 
-function ColorPicker({ setClose }) {
-  const { colors, setThemeColor } = useTheme();
+function ColorPicker() {
+  const { isColorOpen, setIsColorOpen } = useTheme();
 
   return (
-    <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] backdrop-blur-md w-10/12 h-2/3 py-4 px-5 border rounded-2xl border-mutedForeground space-y-4 flex flex-col sm:h-auto sm:w-max z-40">
-      <div className="flex justify-between items-center cursor-default">
-        <p className="ms-3">Pick a color</p>
-        <Button onclick={() => setClose((prev) => !prev)} variant="icon">
-          <CircleX />
-        </Button>
+    <>
+      <div
+        className={`absolute ${
+          isColorOpen ? "top-0" : "-top-[100vh]"
+        } left-0 w-screen h-screen backdrop-blur-md z-20 sm:hidden`}
+      ></div>
+      <div className="w-screen absolute p-3 top-0 right-0 z-50 flex flex-col items-end gap-3 sm:w-fit sm:grid sm:grid-cols-[1fr_min-content] sm:gap-2">
+        <div className="sm:self-center sm:-col-start-1 sm:row-start-1">
+          <Button
+            onclick={() => setIsColorOpen((prev) => !prev)}
+            variant="icon"
+          >
+            <CircleX />
+          </Button>
+        </div>
+        <div className="self-center grid grid-cols-4 p-3 gap-3 sm:flex sm:items-center sm:flex-wrap sm:gap-2 sm:py-0">
+          <Colors />
+        </div>
       </div>
-      <div className="w-full h-full grid grid-cols-3 gap-1  justify-items-center sm:h-auto sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:gap-3">
-        {colors.map((col) => (
-          <div
-            className={`${col.background} w-16 aspect-square rounded-full hover:cursor-pointer hover:ring-4 ${col.ring} sm:w-10`}
-            key={col.name}
-            onClick={() => setThemeColor(col.name)}
-          ></div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
 

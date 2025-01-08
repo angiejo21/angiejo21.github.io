@@ -4,12 +4,12 @@ import { Link } from "react-router";
 
 function Welcome() {
   return (
-    <div className="z-10 flex flex-col items-center w-3/4 lg:w-1/2">
+    <div className="h-full z-10 flex flex-col items-center justify-center w-3/4 lg:w-1/2">
       <p className="text-4xl font font-bold text-primary mb-4 text-center">
         Welcome to my portfolio 👋
       </p>
-      <p className="text-center">
-        I'm specializing in{" "}
+      <p className="text-xl text-center">
+        I&apos;m specializing in{" "}
         <span className="text-secondary">full-stack development</span> using the{" "}
         <span className="text-secondary">MERN</span> stack, but I love learning
         new stuff every other day and find the best solutions for all.

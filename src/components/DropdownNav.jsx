@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Button from "./Button";
 import { FileUser, Menu, Palette, CircleX } from "lucide-react";
 import { useTheme } from "../context/themeContext";
+import Button from "./Button";
 import NavLink from "./NavLink";
 
 function DropdownNav() {
@@ -9,8 +9,8 @@ function DropdownNav() {
   const { isColorOpen, setIsColorOpen } = useTheme();
 
   return (
-    <div className="sm:hidden relative">
-      <div className="">
+    <div className="sm:hidden ">
+      <div className={`relative z-50 ${isColorOpen ? "hidden" : ""}`}>
         <Button onclick={() => setIsMenuOpen((prev) => !prev)} variant="icon">
           {!isMenuOpen ? (
             <Menu className="opacity-100" />
@@ -24,30 +24,38 @@ function DropdownNav() {
           )}
         </Button>
       </div>
-      {isMenuOpen && (
-        <div className="absolute top-[150%] -right-0 w-64 h-96 backdrop-blur-md rounded-2xl border border-mutedForeground flex flex-col justify-between">
+      <div
+        className={`absolute ${
+          isMenuOpen ? "top-0" : "-top-[100vh]"
+        } left-0 w-screen h-screen backdrop-blur-md`}
+      >
+        <div className="w-screen flex flex-col text-xl">
           <div
-            className="w-full flex flex-col justify-start items-center gap-4 mt-10"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className={`${isColorOpen ? "opacity-0 pointer-events-none" : ""}`}
           >
-            <NavLink to="/welcome">Home</NavLink>
-            <NavLink to="/about-me">About me</NavLink>
-            <NavLink to="/coding">Coding</NavLink>
-            <NavLink to="/contact-me">Contact</NavLink>
-          </div>
-          <div className="flex justify-between p-5">
-            <Button variant="nav" type="resume">
-              <FileUser /> Resume
-            </Button>
-            <Button
-              variant="icon"
-              onclick={() => setIsColorOpen((prev) => !prev)}
+            <div
+              className="w-full flex flex-col justify-start items-center gap-4 mt-24"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
             >
-              <Palette />
-            </Button>
+              <NavLink to="/welcome">Home</NavLink>
+              <NavLink to="/about-me">About me</NavLink>
+              <NavLink to="/coding">Coding</NavLink>
+              <NavLink to="/contact-me">Contact</NavLink>
+            </div>
+            <div className="flex justify-between p-12">
+              <Button variant="nav" type="resume">
+                <FileUser /> Resume
+              </Button>
+              <Button
+                variant="icon"
+                onclick={() => setIsColorOpen((prev) => !prev)}
+              >
+                <Palette />
+              </Button>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
