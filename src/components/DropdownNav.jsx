@@ -27,7 +27,7 @@ function DropdownNav() {
       <div
         className={`absolute ${
           isMenuOpen ? "top-0" : "-top-[100vh]"
-        } left-0 w-screen h-screen backdrop-blur-md`}
+        } left-0 w-screen h-[50vh] backdrop-blur-md`}
       >
         <div className="w-screen flex flex-col text-xl">
           <div

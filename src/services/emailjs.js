@@ -17,6 +17,6 @@ export async function sendContactEmail(info) {
   if (res.status === 200) {
     toast.success("Message sent! I'll get back to you soon.");
   } else {
-    toast.error(`Sorry there was a problem try again later.`);
+    toast.error("Sorry there was a problem try again later.");
   }
 }

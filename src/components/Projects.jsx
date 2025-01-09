@@ -4,15 +4,20 @@ import Pill from "./Pill";
 
 function Projects() {
   const [projectList, setProjectList] = useState(projects);
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+  const allImagesLoaded = projectList.length === imagesLoaded;
 
   function searchProjects(techValue) {
     const newProjects = projects.filter((p) => p.tech.includes(techValue));
     setProjectList(newProjects);
   }
 
+  function handleImagesLoad() {
+    setImagesLoaded((prev) => prev + 1);
+  }
+
   return (
     <div className="space-y-10 mb-5">
-      {/* Languages */}
       <div>
         <ul className="flex gap-2 flex-wrap justify-center">
           <Pill color="slate-500" onclick={() => setProjectList(projects)}>
@@ -40,10 +45,16 @@ function Projects() {
               className="p-5 aspect-square flex flex-col justify-center relative overflow-hidden rounded-xl"
             >
               <a href={p.url} target="_blank" className="group">
+                {!allImagesLoaded && (
+                  <div className="absolute w-full h-full top-0 left-0 bg-accent animate-pulse"></div>
+                )}
                 <div className="absolute inset-0 bg-secondary opacity-0 group-hover:opacity-10 transition-opacity"></div>
                 <img
                   src={p.img}
-                  className="z-0 absolute w-full h-full top-0 left-0 opacity-15 grayscale"
+                  className={`z-0 absolute w-full h-full top-0 left-0 grayscale ${
+                    allImagesLoaded ? "opacity-15" : "opacity-0"
+                  }`}
+                  onLoad={handleImagesLoad}
                 />
                 <div className="relative space-y-3 z-20 ">
                   <h6 className="relative font-semibold text-lg uppercase inline-block after:content-[''] after:w-full after:h-0.5 after:bg-accent after:z-30 after:absolute after:-bottom-1 after:left-0 after:opacity-100">

@@ -9,7 +9,7 @@ function Colors() {
         <div
           className={`${
             col.background
-          } w-20 aspect-square rounded-full hover:cursor-pointer ${
+          } w-16 aspect-square rounded-full hover:cursor-pointer ${
             col.name === themeColor ? "ring-4" : ""
           } hover:ring-4 ${col.ring} sm:w-10`}
           key={col.name}
