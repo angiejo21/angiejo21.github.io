@@ -8,7 +8,12 @@ function ContactForm() {
   const [isSent, setIsSent] = useState(false);
   const inputClass =
     "z-10 w-full rounded-md py-3 px-5 bg-background text-foreground border border-mutedForeground sm:border-0 focus:ring focus:ring-4 focus:ring-primary ";
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   function onSubmit(data) {
     console.log(data);
@@ -36,18 +41,30 @@ function ContactForm() {
             placeholder="Last name"
             className={`row-start-2 sm:row-start-1 ${inputClass}`}
           />
-          <input
-            {...register("email", { required: true })}
-            placeholder="Email"
-            className={`row-start-3 sm:row-start-2 sm:col-span-2 ${inputClass}`}
-          />
+          <div className="row-start-3 sm:row-start-2 sm:col-span-2 relative">
+            <input
+              {...register("email", {
+                required: true,
+                pattern: {
+                  value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                  message: "I need a valid email to answer 😁.",
+                },
+              })}
+              placeholder="Email"
+              className={` ${inputClass} ${errors.email ? "bg-red-500" : ""}`}
+              aria-invalid={errors.email ? true : false}
+            />
+          </div>
           <textarea
             {...register("message", { required: true })}
             placeholder="Message"
             className={`row-start-4 sm:row-start-3 sm:col-span-2 ${inputClass}`}
           />
         </div>
-        <div className="w-full flex justify-end items-center">
+        <div className="w-full flex justify-between items-center gap-1">
+          <div className="text-red-200">
+            {errors.email && errors.email.message}
+          </div>
           <Button variant="primary" type="submit">
             <Send />
             Send
